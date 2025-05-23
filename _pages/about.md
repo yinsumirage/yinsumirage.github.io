@@ -11,6 +11,7 @@ I am Guo Wentao, a researcher focusing on robotics and artificial intelligence, 
 
 Research Experience
 ======
+
 Underactuated Hand System Research
 ------
 Led the full-process development of the [Hockens-A Hand](https://yinsumirage.github.io/talks/2012-03-01-talk-1) project, including mechanical design, control system development, and grasping algorithm validation. Constructed a complete R&D framework from theoretical design to physical implementation, with related results submitted to the top robotics conference IROS. Gained in-depth mastery of the full-cycle research methodology.
@@ -21,6 +22,7 @@ Focused on fairness in large model decision-making during the X-institute summer
 
 Competition
 ======
+
 Competition Achievements
 ------
 Awarded over 30 times in competitions, including 5 national-level awards as team leader.
@@ -37,10 +39,13 @@ Currently deeply engaged in embodied intelligence, with research directions incl
 
 Academic Perspective: Data Challenges and Breakthrough Directions in Embodied Intelligence
 ======
+
 I believe the core challenge in current embodied intelligence research lies in **data issues**, which can be broken down into two key dimensions:
+
 Paradigm Innovation in Data Collection
 ------
 **Reproducibility Challenges**: Data collected in traditional laboratory environments is highly dependent on variables like lighting and hardware models, limiting reusability. Need to break through the "customized collection" paradigm and explore methods to extract key action features from massive human behavior videos. Draw inspiration from human learning through observation and trial-and-error to reduce reliance on high-precision teleoperation data.
+
 Construction of Data Quality Evaluation Systems
 ------
-Bias vs. Generalization Conflict: Data collectors' action habits introduce biases, requiring the establishment of scientific evaluation criteria to identify redundant or low-quality operations. Define core indicators for high-quality data (e.g., action efficiency, environmental adaptability) to guide data collection strategies, avoiding "data piling" approaches and promoting the evolution of embodied intelligence from "data-driven" to "knowledge-guided".
+**Bias vs. Generalization Conflict**: Data collectors' action habits introduce biases, requiring the establishment of scientific evaluation criteria to identify redundant or low-quality operations. Define core indicators for high-quality data (e.g., action efficiency, environmental adaptability) to guide data collection strategies, avoiding "data piling" approaches and promoting the evolution of embodied intelligence from "data-driven" to "knowledge-guided".
