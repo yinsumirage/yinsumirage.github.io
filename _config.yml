@@ -28,7 +28,7 @@ author:
   bio              : "Talk is cheap. Show me the code."
   location         : "China"
   employer         : "Beijing Institution of Technology"
-  uri              : "https://www.bit.edu.cn"
+  uri              : #
   email            : "2840369457@qq.com" 
 
   # Academic websites
