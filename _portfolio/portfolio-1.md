@@ -1,6 +1,6 @@
 ---
-title: "Portfolio item number 1"
-excerpt: "Short description of portfolio item number 1<br/><img src='/images/500x300.png'>"
+title: "the 6th National University Contest on Intelligent Robotic Innovations"
+excerpt: "Short description of portfolio item number 1<br/><img src='/images/portfolio/2023/6th-NUCIRI.jpg'>"
 collection: portfolio
 ---
 
