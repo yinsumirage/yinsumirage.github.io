@@ -33,7 +33,7 @@ $$
 
 图中红色点是均匀的概率分布，蓝色点是任意的概率分布。
 点状分布对应一维数据的概率向量分布，点云状分布对应二维数据的概率向量分布
-![](/2025-02/discrete-distribution.png)
+![](/images/posts/2025-02/discrete-distribution.png)
 
 Push-forward operator：前向操作符
 对于连续映射\\( T:\mathcal{X}\to\mathcal{Y} \\)，定义前向操作符\\( T_\sharp:\mathcal{M(X)}\to\mathcal{M(Y)} \\)，对于离散测度，前向操作符移动支撑测度内所有点的位置
@@ -43,7 +43,7 @@ T_\sharp\alpha\overset{\text{def.}}{=}\sum\limits_i\mathbf{a}_i\delta_{T(x_i)}
 $$
 
 直观地说，可测量映射\\( T:\mathcal{X}\to\mathcal{Y} \\)可以解释为将单个点从可测量空间移动道另一个点的函数，\\( T_\sharp \\)则是\\( T \\)的一个扩展，作用对象扩展到了一整个概率测度到另一个新概率测度
-![](/2025-02/push-function.png)
+![](/images/posts/2025-02/push-function.png)
 
 ## 2.2 蒙日（Monge）问题
 ### 2.3.1 定义
@@ -63,7 +63,7 @@ $$\forall j \in [\![ m ]\!], \quad \mathbf{b}_j=\sum_{i: T\left(x_i\right)=y_j} 
 \\( n>m \\)时，一个\\( x_i \\)只能输出到一个\\( y_j \\)，但一个\\( y_j \\)允许输入多个\\( x_i \\)
 \\( n<m \\)意味着优化问题无解
 下图为两个Monge问题例子：
-![](/2025-02/example-monge.png)
+![](/images/posts/2025-02/example-monge.png)
 
 左图中两个离散测度内点是对称相等的，而右图是大小区分的
 
@@ -102,7 +102,7 @@ $$
 $$
 
 具体例子如下图：
-![](/2025-02/example-T.png)
+![](/images/posts/2025-02/example-T.png)
 
 矩阵集\\( \mathbf{U}(\mathbf{a},\mathbf{b}) \\)由 \\( n+m \\) 相等约束有界和定义，因此是凸多面体（有限矩阵集的凸包）
 
@@ -137,7 +137,7 @@ $$\mathrm{L}_{\mathbf{C}}(\mathbf{a}, \mathbf{b}) \stackrel{\text { def. }}{=} \
 ### 3.1.2 二分图
 对于线性规划寻找顶点解时，当判断其是否是一个最优解，需要符合以下条件：如果P是一个顶点解，那么P中有质量流的路径一定不行成一个环。
 这同时也意味着P中最多只能有n + m − 1条不为零的质量流。具体的示意图如下：
-![](/2025-02/bipartite-network-flow.png)
+![](/images/posts/2025-02/bipartite-network-flow.png)
 上图每条连线表示一个质量流，但其中存在环，可知一定不是最优解。这便是求解最优运输的集合解释。
 
 ### 3.1.3 西北角算法与网络单纯性法
@@ -165,10 +165,10 @@ $$\mathbf{P}_{i, j} \leq 1 $$
 $$ {\mathrm{L}}_{\mathbf{C}}^{\varepsilon }\left( {\mathbf{a},\mathbf{b}}\right) \overset{\text{ def.} }{ = }\mathop{\min }\limits_{ {\mathbf{P} \in  \mathbf{U}\left( {\mathbf{a},\mathbf{b}}\right)} }\langle \mathbf{P},\mathbf{C}\rangle  - \varepsilon \mathbf{H}\left( \mathbf{P}\right)$$
 
 图4.1描述了熵正则化的影响，熵逐渐将原始的\\( LP \\)解法推离三角形边界，移动到熵中心
-![](/2025-02/impact-of-epsilon.png)
+![](/images/posts/2025-02/impact-of-epsilon.png)
 
 正则化鼓励利用多数小流量路径的传输，而惩罚稀疏的，利用少数大流量路径的传输，由此达到减少计算复杂度的目的。具体的解释可以参考下述的示意图：
-![](/2025-02/impact-of-epsilon2.png)
+![](/images/posts/2025-02/impact-of-epsilon2.png)
 当参数\\( \varepsilon \\)越大，最优解的耦合程度越来越稀疏。
 通过熵正则化的处理，求取近似解的过程，能够有效降低获取理想解的时间。
 
@@ -176,7 +176,7 @@ $$ {\mathrm{L}}_{\mathbf{C}}^{\varepsilon }\left( {\mathbf{a},\mathbf{b}}\right)
 Sinkhorn算法基于熵正则化的思想，提供一种更加巧妙的求解向量u和v的解法（得到u和v的解，就可以认为得到了Kantorovich Relaxation问题的对偶解，也就是最终的最优解。
 
 与熵相比，二次正则化的主要优点是它会产生最优耦合的稀疏近似，但这是以较慢的算法为代价的，该算法无法像 Sinkhorn 那样高效地并行化以同时计算多个最优传输（如 §4.16 中所述）。图 4.6 对比了熵正则化器和二次正则化器实现的近似值。
-![](/2025-02/comparison.png)
+![](/images/posts/2025-02/comparison.png)
 ### 3.3.1 先前符号整理
 
 随机变量\\( r \\)与\\( c \\)为概率密度，属于单纯性\\( \sum_d:=\{x\in R_{+}^{d}: x^{T}1_d=1\} \\)
@@ -207,7 +207,7 @@ $$
 $$d_{M, \alpha}(r, c) \stackrel{\text { def }}{=} \min _{P \in U_{\alpha}(r, c)}\langle P, M\rangle$$
 
 如下图可见，Sinkhorn 距离是 M 与该球中最佳运输点的点积。
-![](/2025-02/view-of-transportation-polytope.png)
+![](/images/posts/2025-02/view-of-transportation-polytope.png)
 根据Cover and Thomas, 1991的文献，有等式：
 
 $$\forall r, c \in \Sigma_{d}, \forall P \in U(r, c), h(P) \leq h(r)+h(c)$$
@@ -306,8 +306,7 @@ B. Muzellec, J. Josse, C. Boyer, and M. Cuturi, “Missing Data Imputation using
 
 ## 4.3 Neural Optimal Transport（ICLR 2023 Spotlight）
 
-![[stochastic_OT_map.png||500]]
-
+![](/images/posts/2025-02/stochastic_OT_map.png)
 
 [iamalexkorotin/NeuralOptimalTransport: PyTorch implementation of "Neural Optimal Transport" (ICLR 2023 Spotlight) (github.com)](https://github.com/iamalexkorotin/NeuralOptimalTransport)
 
