@@ -12,9 +12,9 @@ def process_dollar_signs(text):
             i += 2
         elif text[i] == '$':
             if in_math:
-                result.append('\\)')
+                result.append('\\\)')
             else:
-                result.append('\\(')
+                result.append('\\\(')
             in_math = not in_math
             i += 1
         else:
