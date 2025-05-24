@@ -40,6 +40,7 @@ Currently deeply engaged in embodied intelligence, with research directions incl
 
 Academic Perspective: Data Challenges and Breakthrough Directions in Embodied Intelligence
 ======
+
 I believe the core challenge in current embodied intelligence research lies in **data issues**, which can be broken down into two key dimensions:
 
 Paradigm Innovation in Data Collection
@@ -48,4 +49,4 @@ Paradigm Innovation in Data Collection
 
 Construction of Data Quality Evaluation Systems
 ------
-Bias vs. Generalization Conflict: Data collectors' action habits introduce biases, requiring the establishment of scientific evaluation criteria to identify redundant or low-quality operations. Define core indicators for high-quality data (e.g., action efficiency, environmental adaptability) to guide data collection strategies, avoiding "data piling" approaches and promoting the evolution of embodied intelligence from "data-driven" to "knowledge-guided".
+**Bias vs. Generalization Conflict**: Data collectors' action habits introduce biases, requiring the establishment of scientific evaluation criteria to identify redundant or low-quality operations. Define core indicators for high-quality data (e.g., action efficiency, environmental adaptability) to guide data collection strategies, avoiding "data piling" approaches and promoting the evolution of embodied intelligence from "data-driven" to "knowledge-guided".
