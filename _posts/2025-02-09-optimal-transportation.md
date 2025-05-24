@@ -5,7 +5,7 @@ permalink: /posts/2025/02/OT/
 tags:
   - study
 ---
-在探索TTA (test time adaptation) 的时期，有幸了解到OT这一方法，也谨以此文感谢李爽老师的教导。
+在探索TTA (test time adaptation) 的时期，有幸了解到OT这一方法，也谨以此文感谢李爽老师对我在大模型方面的教导。
 
 # 1. 最优运输问题简述
 对于源数据分布与目标数据分布这两大分布，我们希望使用最小的代价\\( c(m,n) \\)完成从源数据分布迁移到目标数据分布这一过程，计算出最佳传输方案\\( p(m,n) \\)
@@ -33,7 +33,7 @@ $$
 
 图中红色点是均匀的概率分布，蓝色点是任意的概率分布。
 点状分布对应一维数据的概率向量分布，点云状分布对应二维数据的概率向量分布
-![[Pasted image 20250208233740.png||500]]
+![](/2025-02/discrete-distribution.png)
 
 Push-forward operator：前向操作符
 对于连续映射\\( T:\mathcal{X}\to\mathcal{Y} \\)，定义前向操作符\\( T_\sharp:\mathcal{M(X)}\to\mathcal{M(Y)} \\)，对于离散测度，前向操作符移动支撑测度内所有点的位置
@@ -43,7 +43,7 @@ T_\sharp\alpha\overset{\text{def.}}{=}\sum\limits_i\mathbf{a}_i\delta_{T(x_i)}
 $$
 
 直观地说，可测量映射\\( T:\mathcal{X}\to\mathcal{Y} \\)可以解释为将单个点从可测量空间移动道另一个点的函数，\\( T_\sharp \\)则是\\( T \\)的一个扩展，作用对象扩展到了一整个概率测度到另一个新概率测度
-![[Pasted image 20250209001646.png||500]]
+![](/2025-02/push-function.png)
 
 ## 2.2 蒙日（Monge）问题
 ### 2.3.1 定义
@@ -63,7 +63,8 @@ $$\forall j \in [\![ m ]\!], \quad \mathbf{b}_j=\sum_{i: T\left(x_i\right)=y_j} 
 \\( n>m \\)时，一个\\( x_i \\)只能输出到一个\\( y_j \\)，但一个\\( y_j \\)允许输入多个\\( x_i \\)
 \\( n<m \\)意味着优化问题无解
 下图为两个Monge问题例子：
-![[Pasted image 20250208235818.png||500]]
+![](/2025-02/example-monge.png)
+
 左图中两个离散测度内点是对称相等的，而右图是大小区分的
 
 最终形式化表达如下
@@ -101,7 +102,7 @@ $$
 $$
 
 具体例子如下图：
-![[Pasted image 20250209101404.png||500]]
+![](/2025-02/example-T.png)
 
 矩阵集\\( \mathbf{U}(\mathbf{a},\mathbf{b}) \\)由 \\( n+m \\) 相等约束有界和定义，因此是凸多面体（有限矩阵集的凸包）
 
@@ -136,7 +137,7 @@ $$\mathrm{L}_{\mathbf{C}}(\mathbf{a}, \mathbf{b}) \stackrel{\text { def. }}{=} \
 ### 3.1.2 二分图
 对于线性规划寻找顶点解时，当判断其是否是一个最优解，需要符合以下条件：如果P是一个顶点解，那么P中有质量流的路径一定不行成一个环。
 这同时也意味着P中最多只能有n + m − 1条不为零的质量流。具体的示意图如下：
-![[Pasted image 20250209104050.png||500]]
+![](/2025-02/bipartite-network-flow.png)
 上图每条连线表示一个质量流，但其中存在环，可知一定不是最优解。这便是求解最优运输的集合解释。
 
 ### 3.1.3 西北角算法与网络单纯性法
@@ -146,16 +147,28 @@ $$\mathrm{L}_{\mathbf{C}}(\mathbf{a}, \mathbf{b}) \stackrel{\text { def. }}{=} \
 ## 3.2 熵(Entropic)正则化
 
 在大部分应用情况下，求标准Kantorovich Relaxation解是不必要的：如果我们利用正则化，改求近似解，那么最优传输的计算代价就大幅降低了。熵正则化的定义公式如下：
+
 $$\mathbf{H}(\mathbf{P}) \stackrel{\text { def. }}{=}-\sum_{i, j} \mathbf{P}_{i, j}\left(\log \left(\mathbf{P}_{i, j}\right)-1\right)$$
-\\( \mathbf{H} \\)是1-strongly concave（凹），因为\\( \partial^2 \mathbf{H}(P)=-\operatorname{diag}\left(1 / \mathbf{P}_{i, j}\right) \\) and \\( \mathbf{P}_{i, j} \leq 1 \\)，熵正则化的想法是使用\\( -\mathbf{H} \\)作为正则化函数，获得一个近似解：
+
+\\( \mathbf{H} \\)是1-strongly concave（凹），因为
+
+$$\partial^2 \mathbf{H}(P)=-\operatorname{diag}\left(1 / \mathbf{P}_{i, j}\right) $$
+
+and 
+
+$$\mathbf{P}_{i, j} \leq 1 $$
+
+熵正则化的想法是使用\\( -\mathbf{H} \\) 
+
+作为正则化函数，获得一个近似解：
 
 $$ {\mathrm{L}}_{\mathbf{C}}^{\varepsilon }\left( {\mathbf{a},\mathbf{b}}\right) \overset{\text{ def.} }{ = }\mathop{\min }\limits_{ {\mathbf{P} \in  \mathbf{U}\left( {\mathbf{a},\mathbf{b}}\right)} }\langle \mathbf{P},\mathbf{C}\rangle  - \varepsilon \mathbf{H}\left( \mathbf{P}\right)$$
 
 图4.1描述了熵正则化的影响，熵逐渐将原始的\\( LP \\)解法推离三角形边界，移动到熵中心
-![[Pasted image 20250209105513.png||500]]
+![](/2025-02/impact-of-epsilon.png)
 
 正则化鼓励利用多数小流量路径的传输，而惩罚稀疏的，利用少数大流量路径的传输，由此达到减少计算复杂度的目的。具体的解释可以参考下述的示意图：
-![[Pasted image 20250209105938.png||500]]
+![](/2025-02/impact-of-epsilon2.png)
 当参数\\( \varepsilon \\)越大，最优解的耦合程度越来越稀疏。
 通过熵正则化的处理，求取近似解的过程，能够有效降低获取理想解的时间。
 
@@ -163,7 +176,7 @@ $$ {\mathrm{L}}_{\mathbf{C}}^{\varepsilon }\left( {\mathbf{a},\mathbf{b}}\right)
 Sinkhorn算法基于熵正则化的思想，提供一种更加巧妙的求解向量u和v的解法（得到u和v的解，就可以认为得到了Kantorovich Relaxation问题的对偶解，也就是最终的最优解。
 
 与熵相比，二次正则化的主要优点是它会产生最优耦合的稀疏近似，但这是以较慢的算法为代价的，该算法无法像 Sinkhorn 那样高效地并行化以同时计算多个最优传输（如 §4.16 中所述）。图 4.6 对比了熵正则化器和二次正则化器实现的近似值。
-![[Pasted image 20250209110514.png||500]]
+![](/2025-02/comparison.png)
 ### 3.3.1 先前符号整理
 
 随机变量\\( r \\)与\\( c \\)为概率密度，属于单纯性\\( \sum_d:=\{x\in R_{+}^{d}: x^{T}1_d=1\} \\)
@@ -181,16 +194,20 @@ $$ \mathcal{M}=\left\{M \in \mathbb{R}_{+}^{d \times d}: \forall i, j \leq d, m
 $$d_{M}(r, c):=\min _{P \in U(r, c)}\langle P, M\rangle$$
 
 ### 3.3.2 sinkhorn distances
-思想是仍是，想让解不稀疏，就需要使得熵增大，可以找到这样一个熵最大的矩阵，即是秩1矩阵\\( rc^{T} \\)熵最大。
-这也符合直观的理解，秩1矩阵每一行都是别的行的倍数，只要有1个不是0，所有都不会是0。
+思想是仍是，想让解不稀疏，就需要使得熵增大，可以找到这样一个熵最大的矩阵，即是秩1矩阵\\( rc^{T} \\)熵最大。这也符合直观的理解，秩1矩阵每一行都是别的行的倍数，只要有1个不是0，所有都不会是0。
 
-于是添加约束\\( U_{\alpha}(r, c)=\left\{P \in U(r, c) \mid \mathrm{KL}\left(P \| r c^{T}\right) \leq \alpha\right\} \\)，让\\( P \\)与\\( rc^{T} \\)足够接近，那么我们写出sinkhorn distances：
+于是添加约束
+
+$$
+U_{\alpha}(r, c)=\left\{P \in U(r, c) \mid \mathrm{KL}\left(P \| r c^{T}\right) \leq \alpha\right\} 
+$$
+
+让\\( P \\)与\\( rc^{T} \\)足够接近，那么我们写出sinkhorn distances：
 
 $$d_{M, \alpha}(r, c) \stackrel{\text { def }}{=} \min _{P \in U_{\alpha}(r, c)}\langle P, M\rangle$$
 
 如下图可见，Sinkhorn 距离是 M 与该球中最佳运输点的点积。
-![[Pasted image 20250209111951.png||500]]
-
+![](/2025-02/view-of-transportation-polytope.png)
 根据Cover and Thomas, 1991的文献，有等式：
 
 $$\forall r, c \in \Sigma_{d}, \forall P \in U(r, c), h(P) \leq h(r)+h(c)$$
