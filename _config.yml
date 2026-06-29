@@ -2,7 +2,7 @@ locale                   : "en-US"
 title                    : "Wentao Guo"
 title_separator          : "-"
 name                     : "Wentao Guo"
-description              : &description "Wentao Guo — Robotics and Embodied AI student focused on underactuated robotic hands, robot cars, and AI agent systems."
+description              : "Wentao Guo - Robotics and Embodied AI student focused on underactuated robotic hands, robot cars, and LLM-based agent systems."
 url                      : ""
 baseurl                  : ""
 repository               : "yinsumirage/wentao"
@@ -11,16 +11,15 @@ author:
   avatar           : "profile.jpg"
   name             : "Wentao Guo"
   pronouns         :
-  bio              : "Robotics and Embodied AI student."
-  location         : "Beijing / Shenzhen, China"
-  employer         : "Beijing Institute of Technology"
+  bio              : "Fake it until you make it."
+  location         : "Shenzhen, China"
+  employer         :
   uri              :
   email            : "yinsumirage@gmail.com"
-  cv_en            : "/assets/cv/WentaoGuo_CV_EN.pdf"
-  cv_cn            : "/assets/cv/WentaoGuo_CV_CN.pdf"
+  cv_en            : "/assets/cv/WentaoGuo_CV.pdf"
 
   arxiv            :
-  googlescholar    :
+  googlescholar    : "https://scholar.google.com/citations?hl=zh-CN&user=Ky84MtsAAAAJ"
   impactstory      :
   orcid            :
   semantic         :
@@ -34,13 +33,13 @@ author:
   kaggle           :
   stackoverflow    :
 
-  WeChat           :
+  WeChat           : "yinsumirage"
   linkedin         :
   bilibili         :
   twitter          :
   youtube          :
   zhihu            :
-  XiaoHongShu      :
+  XiaoHongShu      : "https://www.xiaohongshu.com/user/profile/671921b8000000001d021c3b"
 
 teaser                   :
 breadcrumbs              : false

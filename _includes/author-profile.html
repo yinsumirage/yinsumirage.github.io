@@ -40,7 +40,11 @@
         <li><a href="mailto:{{ author.email }}"><i class="fas fa-fw fa-envelope icon-pad-right" aria-hidden="true"></i>{{ site.data.ui-text[site.locale].email_label | default: "Email" }}</a></li>
       {% endif %}
       {% if author.WeChat %}
-        <li class="author__wechat"><a href="{{ author.WeChat }}"><i class="fab fa-fw fa-weixin icon-pad-right" aria-hidden="true"></i>WeChat</a></li>
+        {% if author.WeChat contains '://' %}
+          <li class="author__wechat"><a href="{{ author.WeChat }}"><i class="fab fa-fw fa-weixin icon-pad-right" aria-hidden="true"></i>WeChat</a></li>
+        {% else %}
+          <li class="author__wechat"><span><i class="fab fa-fw fa-weixin icon-pad-right" aria-hidden="true"></i>WeChat: {{ author.WeChat }}</span></li>
+        {% endif %}
       {% endif %}
       
       <!-- Font Awesome and Academicons icons / Academic websites -->
@@ -79,11 +83,11 @@
       {% if author.github %}
         <li><a href="https://github.com/{{ author.github }}"><i class="fab fa-fw fa-github icon-pad-right" aria-hidden="true"></i>Github</a></li>
       {% endif %}
-      {% if author.cv_en %}
-        <li><a href="{{ author.cv_en | prepend: base_path }}"><i class="fas fa-fw fa-file-lines icon-pad-right" aria-hidden="true"></i>CV-EN</a></li>
+      {% if author.XiaoHongShu %}
+        <li><a href="{{ author.XiaoHongShu }}"><i class="fas fa-fw fa-book icon-pad-right" aria-hidden="true"></i>RedNote</a></li>
       {% endif %}
-      {% if author.cv_cn %}
-        <li><a href="{{ author.cv_cn | prepend: base_path }}"><i class="fas fa-fw fa-file-lines icon-pad-right" aria-hidden="true"></i>CV-CN</a></li>
+      {% if author.cv_en %}
+        <li><a href="{{ author.cv_en | prepend: base_path }}"><i class="fas fa-fw fa-file-lines icon-pad-right" aria-hidden="true"></i>CV</a></li>
       {% endif %}
       {% if author.kaggle %}
         <li><a href="https://kaggle.com/{{ author.kaggle }}"><i class="fab fa-fw fa-kaggle icon-pad-right" aria-hidden="true"></i>Kaggle</a></li>
@@ -168,9 +172,6 @@
       {% if author.zhihu %}
         <li><a href="{{ author.zhihu }}"><i class="fab fa-fw fa-zhihu icon-pad-right" aria-hidden="true"></i>Zhihu</a></li>
       {% endif %}     
-      {% if author.XiaoHongShu %}
-        <li><a href="{{ author.XiaoHongShu }}"><i class="fas fa-fw fa-book icon-pad-right" aria-hidden="true"></i>RedNote</a></li>
-      {% endif %} 
     </ul>
   </div>
 </div>

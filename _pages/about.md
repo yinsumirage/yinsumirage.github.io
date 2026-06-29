@@ -8,11 +8,27 @@ redirect_from:
   - /about.html
 ---
 
-<h1 class="main-heading">Hi there, welcome to my homepage!</h1>
+<header class="hero-heading">
+  <h1 class="main-heading">
+    <span class="heading-kicker">Welcome, I am Wentao Guo.</span>
+    <span class="heading-main">Building embodied intelligence through<br>data loops and robot hands.</span>
+  </h1>
+  <div class="hero-chips" aria-label="Research themes">
+    <span>Data-centric robotics</span>
+    <span>Closed-loop learning</span>
+    <span>Task-aware hardware</span>
+  </div>
+</header>
 
 <section id="about" class="profile-intro">
   <p class="intro-lead">
-    I am an undergraduate student focused on Robotics and Embodied AI, with work spanning underactuated robotic hands, robot cars, and LLM-based agent systems.
+    I am Wentao Guo, an incoming first-year Ph.D. student at The University of Hong Kong, working on Robotics and Embodied AI. 
+  </p>
+  <p class="intro-lead">
+    My research aims to build stronger embodied models through data-centric exploration: understanding what data robots need, closing the loop between collection and policy improvement, and developing systems that can continuously refine behavior from real interaction.
+  </p>
+  <p class="intro-lead">
+    I am also interested in hardware as part of the learning pipeline. By designing task-aware robotic hands, grippers, and data-collection devices, I hope to obtain higher-quality interaction data, reshape the action space of manipulation tasks, and study how better hardware design can reduce the burden on robot policies.
   </p>
 </section>
 
@@ -20,7 +36,6 @@ redirect_from:
   <h2>News</h2>
   <div class="news-box">
     <ul class="news-list">
-      <li><span class="news-date"><em>2026 Fall</em></span> I will start my Ph.D. at the University of Hong Kong, advised by <a href="https://yanchaoyang.github.io/" target="_blank" rel="noreferrer">Yanchao Yang</a>.</li>
       <li><span class="news-date"><em>2026.06</em></span> mu0 received Best Innovation Solution at the 2nd WBCD Winners @ ICRA 2026.</li>
       <li><span class="news-date"><em>2026.02</em></span> Received Bronze Award at Deep Hackathon 2025.</li>
       <li><span class="news-date"><em>2025.10</em></span> SCAL received Best Demo Award at IROS Workshop CIM.</li>
@@ -36,7 +51,7 @@ redirect_from:
   <div class="education-container">
     <div class="education-card">
       <div class="education-logos">
-        <img class="education-logo-wide" src="assets/img/school_logo/hku_logo.png" alt="The University of Hong Kong logo">
+        <img class="education-logo-wide" src="images/school_logo/hku_logo.png" alt="The University of Hong Kong logo">
       </div>
       <div class="education-info">
         <strong>The University of Hong Kong</strong><br>
@@ -47,42 +62,35 @@ redirect_from:
 
     <div class="education-card">
       <div class="education-logos">
-        <span class="education-logo-text">TG</span>
+        <img class="education-logo-wide" src="images/school_logo/transcengram_logo.png" alt="Transcengram logo">
       </div>
       <div class="education-info">
-        <strong><a href="https://transcengram.com/" target="_blank" rel="noreferrer">Transcengram</a></strong><br>
+        <strong>Transcengram</strong><br>
         <em>2025.10 - Present</em><br>
-        Algorithm Intern, Shenzhen Algorithm Department. Research on teleoperation and data collection.
+        Algorithm Intern in <a href="https://transcengram.com/" target="_blank" rel="noreferrer">Transcengram</a>, Shenzhen Algorithm Department. Research on teleoperation and data collection.
       </div>
     </div>
 
     <div class="education-card">
       <div class="education-logos">
-        <img class="education-logo-wide" src="assets/img/school_logo/x-institue_logo.jpg" alt="X-Institute logo">
-        <img src="assets/img/school_logo/Tsinghua_University_Logo.svg" alt="Tsinghua University logo">
+        <img class="education-logo-wide" src="images/school_logo/x-institue_logo.jpg" alt="X-Institute logo">
+        <img src="images/school_logo/Tsinghua_University_Logo.svg" alt="Tsinghua University logo">
       </div>
       <div class="education-info">
         <strong>X-Institute (X-Scholar)</strong><br>
         <em>2024.10 - Present</em><br>
-        Tsinghua University Tsien Excellence in Engineering Program (Joint Training), advised by <a href="https://scholar.google.com/citations?hl=zh-CN&amp;user=n-3doEMAAAAJ" target="_blank" rel="noreferrer">Wenzeng Zhang</a>
-        <ul>
-          <li>Research: underactuated hands & embodied AI policies</li>
-          <li><a href="https://www.x-institute.edu.cn/accompany/xidea" target="_blank" rel="noreferrer">TEEP Step-by-Step Training Program</a></li>
-        </ul>
+        Tsinghua University Tsien Excellence in Engineering Program (Joint Training), advised by <a href="https://scholar.google.com/citations?hl=zh-CN&amp;user=n-3doEMAAAAJ" target="_blank" rel="noreferrer">Wenzeng Zhang</a>. Research on underactuated hands and embodied AI policies
       </div>
     </div>
 
     <div class="education-card">
       <div class="education-logos">
-        <img src="assets/img/school_logo/bit_logo.svg" alt="Beijing Institute of Technology logo">
+        <img src="images/school_logo/bit_logo.svg" alt="Beijing Institute of Technology logo">
       </div>
       <div class="education-info">
         <strong>Beijing Institute of Technology</strong><br>
         <em>2022.8 - 2026.6</em><br>
-        School of Computer Science · Xu Teli Honors Program (B.Eng.)
-        <ul>
-          <li>Dewin Scholarship & Excellent Student</li>
-        </ul>
+        School of Computer Science · Xu Teli Honors Program (B.Eng.). Dewin Scholarship.
       </div>
     </div>
   </div>
@@ -103,12 +111,14 @@ redirect_from:
           <img src="assets/papers/26_robolineage/image/fig2.png" alt="RoboLineage lifecycle overview">
         </div>
         <div>
-          <span class="pub-list-badge">Preprint</span>
           <strong>RoboLineage: Agent-Native Data Lifecycle Governance Across Robot Policy Iterations</strong><br>
           <i>Qian Luo, <strong>Wentao Guo</strong>, Zhennan Qin, Nanchun Guo, Yunhan Zhao, Yi Ma, Yanchao Yang<sup>†</sup>.</i><br>
           <p>
             Agent-native lifecycle governance for robot policy iteration across collection, review, training, evaluation, and recollection.
           </p>
+          <div class="pub-badge-row">
+            <span class="pub-list-badge">Preprint</span>
+          </div>
           <div class="link-row compact">
             <a class="homepage-link" href="https://arxiv.org/abs/2606.22142" target="_blank" rel="noreferrer">arXiv</a>
             <a class="homepage-link" href="https://robolineage.github.io/" target="_blank" rel="noreferrer">Page</a>
@@ -125,16 +135,20 @@ redirect_from:
           <img src="assets/papers/26_icra/image/照片.png" alt="SCAL prototype">
         </div>
         <div>
-          <span class="pub-list-badge">Preprint</span>
           <strong>SCAL for Pinch-Lifting: Complementary Rotational and Linear Prototypes for Environment-Adaptive Grasping</strong><br>
           <i><strong>Wentao Guo</strong>, Wenzeng Zhang<sup>†</sup>.</i><br>
           <p>
             Complementary rotational and linear prototypes for environment-adaptive pinch-lifting and grasping.
           </p>
+          <div class="pub-badge-row">
+            <span class="pub-list-badge">Preprint</span>
+            <span class="pub-list-badge">IROS Workshop CIM Best Demo Award</span>
+          </div>
           <div class="link-row compact">
             <a class="homepage-link" href="assets/papers/26_icra/icra2026.pdf" target="_blank" rel="noreferrer">PDF</a>
             <a class="homepage-link" href="https://arxiv.org/abs/2510.22738" target="_blank" rel="noreferrer">arXiv</a>
             <a class="homepage-link" href="assets/papers/26_icra/tl_hand_final.mp4" target="_blank" rel="noreferrer">Video</a>
+            <a class="homepage-link" href="assets/papers/26_icra/poster.jpg?view=poster" target="_blank" rel="noreferrer">Poster</a>
           </div>
         </div>
       </div>
@@ -146,15 +160,18 @@ redirect_from:
           <img src="assets/papers/25_robio/image/demo集合.png" alt="Hoecken-D hand demonstrations">
         </div>
         <div>
-          <span class="pub-list-badge">ROBIO 2025 Oral</span>
           <strong>Hoecken-D Hand: A Novel Robotic Hand for Linear Parallel Pinching and Self-Adaptive Grasping</strong><br>
           <i><strong>Wentao Guo</strong>, Wenzeng Zhang<sup>†</sup>.</i><br>
           <p>
             A robotic hand for linear parallel pinching and self-adaptive grasping, designed around compact linkage-driven motion.
           </p>
+          <div class="pub-badge-row">
+            <span class="pub-list-badge">ROBIO 2025 Oral</span>
+          </div>
           <div class="link-row compact">
             <a class="homepage-link" href="assets/papers/25_robio/25_robio_hoeckend.pdf" target="_blank" rel="noreferrer">PDF</a>
             <a class="homepage-link" href="https://arxiv.org/abs/2510.13553" target="_blank" rel="noreferrer">arXiv</a>
+            <a class="homepage-link" href="assets/papers/25_robio/poster.jpg?view=poster" target="_blank" rel="noreferrer">Poster</a>
           </div>
         </div>
       </div>
@@ -166,16 +183,19 @@ redirect_from:
           <img src="assets/papers/25_iros/image/抓取照片.png" alt="Hoeckens linkage hand grasping">
         </div>
         <div>
-          <span class="pub-list-badge">IROS 2025 Oral</span>
           <strong>A Novel Robot Hand with Hoeckens Linkages and Soft Phalanges for Scooping and Self-Adaptive Grasping in Environmental Constraints</strong><br>
           <i><strong>Wentao Guo</strong>, Yizhou Wang, Wenzeng Zhang<sup>†</sup>.</i><br>
           <p>
             A robot hand design for scooping and self-adaptive grasping in environmental constraints, combining Hoeckens linkages with soft phalanges.
           </p>
+          <div class="pub-badge-row">
+            <span class="pub-list-badge">IROS 2025 Oral</span>
+          </div>
           <div class="link-row compact">
             <a class="homepage-link" href="assets/papers/25_iros/201866-3909.pdf" target="_blank" rel="noreferrer">PDF</a>
             <a class="homepage-link" href="https://arxiv.org/abs/2510.13535" target="_blank" rel="noreferrer">arXiv</a>
             <a class="homepage-link" href="https://www.youtube.com/watch?v=eQuu3pJjB0U" target="_blank" rel="noreferrer">Video</a>
+            <a class="homepage-link" href="assets/papers/25_iros/poster.jpg?view=poster" target="_blank" rel="noreferrer">Poster</a>
           </div>
         </div>
       </div>
@@ -198,21 +218,22 @@ redirect_from:
       </li>
       <li>
         <span class="pub-list-badge">Preprint</span>
+        <span class="pub-list-badge">IROS Workshop CIM Best Demo Award</span>
         <span class="pub-list-title">SCAL for Pinch-Lifting: Complementary Rotational and Linear Prototypes for Environment-Adaptive Grasping</span><br>
         <span class="pub-list-authors"><strong>Wentao Guo</strong>, Wenzeng Zhang<sup>†</sup>.</span>
-        <span class="pub-list-links"><a href="assets/papers/26_icra/icra2026.pdf">[PDF]</a><a href="https://arxiv.org/abs/2510.22738">[arXiv]</a><a href="assets/papers/26_icra/tl_hand_final.mp4">[video]</a></span>
+        <span class="pub-list-links"><a href="assets/papers/26_icra/icra2026.pdf">[PDF]</a><a href="https://arxiv.org/abs/2510.22738">[arXiv]</a><a href="assets/papers/26_icra/tl_hand_final.mp4">[video]</a><a href="assets/papers/26_icra/poster.jpg?view=poster">[poster]</a></span>
       </li>
       <li>
         <span class="pub-list-badge">ROBIO 2025 Oral</span>
         <span class="pub-list-title">Hoecken-D Hand: A Novel Robotic Hand for Linear Parallel Pinching and Self-Adaptive Grasping</span><br>
         <span class="pub-list-authors"><strong>Wentao Guo</strong>, Wenzeng Zhang<sup>†</sup>.</span>
-        <span class="pub-list-links"><a href="assets/papers/25_robio/25_robio_hoeckend.pdf">[PDF]</a><a href="https://arxiv.org/abs/2510.13553">[arXiv]</a></span>
+        <span class="pub-list-links"><a href="assets/papers/25_robio/25_robio_hoeckend.pdf">[PDF]</a><a href="https://arxiv.org/abs/2510.13553">[arXiv]</a><a href="assets/papers/25_robio/poster.jpg?view=poster">[poster]</a></span>
       </li>
       <li>
         <span class="pub-list-badge">IROS 2025 Oral</span>
         <span class="pub-list-title">A Novel Robot Hand with Hoeckens Linkages and Soft Phalanges for Scooping and Self-Adaptive Grasping in Environmental Constraints</span><br>
         <span class="pub-list-authors"><strong>Wentao Guo</strong>, Yizhou Wang, Wenzeng Zhang<sup>†</sup>.</span>
-        <span class="pub-list-links"><a href="assets/papers/25_iros/201866-3909.pdf">[PDF]</a><a href="https://arxiv.org/abs/2510.13535">[arXiv]</a><a href="https://www.youtube.com/watch?v=eQuu3pJjB0U">[video]</a></span>
+        <span class="pub-list-links"><a href="assets/papers/25_iros/201866-3909.pdf">[PDF]</a><a href="https://arxiv.org/abs/2510.13535">[arXiv]</a><a href="https://www.youtube.com/watch?v=eQuu3pJjB0U">[video]</a><a href="assets/papers/25_iros/poster.jpg?view=poster">[poster]</a></span>
       </li>
     </ul>
   </div>
@@ -224,7 +245,7 @@ redirect_from:
   <div class="project-card">
     <div class="homepage-card-body">
       <div class="pub-media-rotator homepage-media" data-interval="4000">
-        <img src="assets/img/projects/26WBCD_mu0.png" alt="mu0 deformable object manipulation project">
+        <img src="images/projects/26WBCD_mu0.png" alt="mu0 deformable object manipulation project">
       </div>
       <div>
         <strong>mu0 · Deformable Object Manipulation</strong>
@@ -233,7 +254,7 @@ redirect_from:
           <a href="https://wbcdcompetition.github.io/#Winners" target="_blank" rel="noreferrer">Best Innovation Solution · 2nd WBCD Winners @ ICRA 2026</a>
         </div>
         <p>
-          Placeholder project entry for mu0's deformable object manipulation work.
+          Designed and standardized a task-specific action workflow, collected UMI data, supplemented targeted data with DAgger, and fine-tuned the model for robust deformable-object manipulation.
         </p>
       </div>
     </div>
@@ -242,15 +263,15 @@ redirect_from:
   <div class="project-card">
     <div class="homepage-card-body">
       <div class="pub-media-rotator homepage-media" data-interval="4000">
-        <img src="assets/img/projects/25AMSE.jpg" alt="Adaptive robotic grippers project">
+        <img src="images/projects/25AMSE.jpg" alt="Adaptive robotic grippers project">
       </div>
       <div>
         <strong>Adaptive Robotic Grippers for Multi-Mode Grasping with Pinching and Scooping under Environmental Constraints</strong>
         <span class="status-pill">2025</span><br>
         <div class="project-badges">
           <a href="https://sites.google.com/site/asmemrc/design-competition-showcase/2025-finalists#h.2oibi1g704mf" target="_blank" rel="noreferrer">ASME SMRDC 2025 1st Place</a>
-          <a href="assets/papers/25_iros/201866-3909.pdf" target="_blank" rel="noreferrer">Paper / Preprint</a>
-          <a href="https://youtu.be/kNnKri4CBBw" target="_blank" rel="noreferrer">Demo Video</a>
+          <a href="https://youtu.be/kNnKri4CBBw" target="_blank" rel="noreferrer">Video</a>
+          <a href="assets/papers/25_iros/201866-3909.pdf" target="_blank" rel="noreferrer">Paper</a>
         </div>
         <p>
           Achieved vertical adaptability via linear linkages, enabling pinch-scoop switching under environmental constraints. Fabricated six 3D-printed prototypes for systematic validation.
@@ -262,7 +283,7 @@ redirect_from:
   <div class="project-card">
     <div class="homepage-card-body">
       <div class="pub-media-rotator homepage-media" data-interval="4000">
-        <img src="assets/img/projects/MoYiXing.png" alt="MoYiXing modular robot car">
+        <img src="images/projects/MoYiXing.png" alt="MoYiXing modular robot car">
       </div>
       <div>
         <strong>MoYiXing Modular Robot Car (Lidar + 6-DOF Arm)</strong>
@@ -283,7 +304,7 @@ redirect_from:
   <div class="project-card">
     <div class="homepage-card-body">
       <div class="pub-media-rotator homepage-media" data-interval="4000">
-        <img src="assets/img/projects/YiBao.png" alt="YiBao meeting agent">
+        <img src="images/projects/YiBao.png" alt="YiBao meeting agent">
       </div>
       <div>
         <strong>YiBao · Meeting Agent (On-device LLM + Local DB + RAG)</strong>
@@ -291,7 +312,7 @@ redirect_from:
         <div class="project-badges">
           <a href="https://www.osredm.com/competition/cyyy/notice" target="_blank" rel="noreferrer">National 3rd Prize · Open-Source Innovation</a>
           <a href="https://www.osredm.com/p69087132/yibao" target="_blank" rel="noreferrer">OSRedM Repo</a>
-          <a href="https://www.osredm.com/p69087132/yibao/tree/master/%E5%B1%95%E7%A4%BA%E8%A7%86%E9%A2%91.mp4" target="_blank" rel="noreferrer">Demo Video</a>
+          <a href="https://www.osredm.com/p69087132/yibao/tree/master/%E5%B1%95%E7%A4%BA%E8%A7%86%E9%A2%91.mp4" target="_blank" rel="noreferrer">Video</a>
         </div>
         <p>
           Meeting agent built on Jiuge on-device LLM: integrates local DB, custom summarization, and ASR, with three RAG optimizations (query planning, confidence gating, adversarial robustness) for better minutes and retrieval.
@@ -303,7 +324,7 @@ redirect_from:
   <div class="project-card">
     <div class="homepage-card-body">
       <div class="pub-media-rotator homepage-media" data-interval="4000">
-        <img src="assets/img/projects/weather.png" alt="Digital twin and AI for grid resilience">
+        <img src="images/projects/weather.png" alt="Digital twin and AI for grid resilience">
       </div>
       <div>
         <strong>Yi-Dian-Yi-Di: Problem-Driven Digital Twin + Strong AI for Grid Resilience</strong>
@@ -322,7 +343,7 @@ redirect_from:
   <div class="project-card">
     <div class="homepage-card-body">
       <div class="pub-media-rotator homepage-media" data-interval="4000">
-        <img src="assets/img/projects/sleep.png" alt="Sleep bias mitigation pipeline">
+        <img src="images/projects/sleep.png" alt="Sleep bias mitigation pipeline">
       </div>
       <div>
         <strong>Bias Mitigation Pipeline for Sleep-Focused LLM Tasks</strong>
@@ -374,8 +395,9 @@ redirect_from:
       <li><strong>1st Prize</strong>, <a href="https://robotcontest2024.moocollege.com/" target="_blank" rel="noreferrer">China University Intelligent Robot Creative Competition (7th)</a> <span class="award-level">National</span></li>
       <li><strong>2nd Prize</strong>, <a href="http://robo-maker.org/" target="_blank" rel="noreferrer">China Intelligent Robot Combat & Competition (Vision-based Antagonism)</a> <span class="award-level">National</span></li>
       <li><strong>2nd Prize</strong>, <a href="https://iyaic.com/" target="_blank" rel="noreferrer">International Youth AI Competition (6th)</a> <span class="award-level">National</span></li>
-      <li><strong>Special Prize</strong>, Challenge Cup - Problem-Driven Special Track (Jiebang Gua Shuai) <span class="award-level">National</span></li>
-      <li><strong>3rd Prize</strong>, Open-Source Innovation Competition <span class="award-level">National</span></li>
+      <li><strong>Special Prize</strong>, <a href="https://mp.weixin.qq.com/s/7oM3LOVDVTd2uuUYfdLXgg" target="_blank" rel="noreferrer">Challenge Cup - Problem-Driven Special Track (Jiebang Gua Shuai)</a> <span class="award-level">National</span></li>
+      <li><strong>3rd Prize</strong>, <a href="https://www.osredm.com/competition/cyyy/notice" target="_blank" rel="noreferrer">Open-Source Innovation Competition</a> <span class="award-level">National</span></li>
+      <li><strong>Disruptive Innovation Award</strong>, X-Camp · X-Challenge Track 7 <span class="award-level">National</span></li>
     </ul>
   </div>
 </section>

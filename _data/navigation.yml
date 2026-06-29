@@ -15,9 +15,3 @@ main:
 
   - title: "Awards"
     url: "/#awards"
-
-  - title: "CV-EN"
-    url: "/assets/cv/WentaoGuo_CV_EN.pdf"
-
-  - title: "CV-CN"
-    url: "/assets/cv/WentaoGuo_CV_CN.pdf"
