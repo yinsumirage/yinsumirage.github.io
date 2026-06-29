@@ -3,9 +3,9 @@ title                    : "Wentao Guo"
 title_separator          : "-"
 name                     : "Wentao Guo"
 description              : "Wentao Guo - Robotics and Embodied AI student focused on underactuated robotic hands, robot cars, and LLM-based agent systems."
-url                      : ""
+url                      : "https://yinsumirage.github.io"
 baseurl                  : ""
-repository               : "yinsumirage/wentao"
+repository               : "yinsumirage/yinsumirage.github.io"
 
 author:
   avatar           : "profile.jpg"
