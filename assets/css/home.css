@@ -22,6 +22,7 @@ body {
   background-color: #ffffff;
   font-family: 'Arial Rounded MT Bold', Verdana, sans-serif;
   font-size: 16px;
+  margin-bottom: 0 !important;
 }
 
 h2,
@@ -455,6 +456,16 @@ h3,
   font-weight: 600;
 }
 
+.page__footer {
+  position: static;
+  margin-top: 1rem;
+}
+
+.page__footer footer {
+  margin-top: 0.9rem;
+  padding-bottom: 1rem;
+}
+
 div.markdown-body a,
 div.page__content a,
 a {
@@ -485,11 +496,11 @@ a:hover {
 
 @media (min-width: 1025px) {
   #main {
-    --sidebar-w: clamp(220px, 20vw, 290px);
-    --avatar-w: clamp(152px, 15vw, 220px);
-    max-width: 1650px;
-    padding-left: 1rem;
-    padding-right: 1rem;
+    --sidebar-w: clamp(210px, 18vw, 265px);
+    --avatar-w: clamp(148px, 13.5vw, 205px);
+    max-width: 1500px;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
   }
 
   .sidebar {
@@ -506,26 +517,30 @@ a:hover {
     font-size: clamp(1.05em, 0.75em + 0.5vw, 1.25em);
   }
 
-  .sidebar p,
   .sidebar li {
-    font-size: clamp(0.76em, 0.58em + 0.28vw, 0.85em);
+    font-size: clamp(0.72em, 0.55em + 0.24vw, 0.8em);
+  }
+
+  .sidebar p {
+    font-size: clamp(0.8em, 0.62em + 0.24vw, 0.9em);
   }
 
   .page {
     float: right;
-    width: calc(100% - var(--sidebar-w) - 40px) !important;
-    padding-left: 28px !important;
+    width: calc(100% - var(--sidebar-w) - 52px) !important;
+    padding-left: 34px !important;
     padding-right: 0 !important;
   }
 
   .page__content {
-    font-size: 1.04em;
+    font-size: 0.98em;
   }
 }
 
 @media (max-width: 1024px) {
   #main {
     max-width: none;
+    margin-top: 1rem;
     padding-left: 1rem;
     padding-right: 1rem;
   }
@@ -538,6 +553,7 @@ a:hover {
     overflow: visible !important;
     width: 100% !important;
     max-width: none !important;
+    padding-top: 0 !important;
     margin-bottom: 1.5em;
   }
 
