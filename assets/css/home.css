@@ -496,11 +496,11 @@ a:hover {
 
 @media (min-width: 1025px) {
   #main {
-    --sidebar-w: clamp(210px, 18vw, 265px);
-    --avatar-w: clamp(148px, 13.5vw, 205px);
-    max-width: 1500px;
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
+    --sidebar-w: clamp(205px, 18vw, 260px);
+    --avatar-w: clamp(143px, 13.5vw, 200px);
+    max-width: 1430px;
+    padding-left: 3rem;
+    padding-right: 3rem;
   }
 
   .sidebar {
