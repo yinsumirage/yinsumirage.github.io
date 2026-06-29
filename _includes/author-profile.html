@@ -79,6 +79,12 @@
       {% if author.github %}
         <li><a href="https://github.com/{{ author.github }}"><i class="fab fa-fw fa-github icon-pad-right" aria-hidden="true"></i>Github</a></li>
       {% endif %}
+      {% if author.cv_en %}
+        <li><a href="{{ author.cv_en | prepend: base_path }}"><i class="fas fa-fw fa-file-lines icon-pad-right" aria-hidden="true"></i>CV-EN</a></li>
+      {% endif %}
+      {% if author.cv_cn %}
+        <li><a href="{{ author.cv_cn | prepend: base_path }}"><i class="fas fa-fw fa-file-lines icon-pad-right" aria-hidden="true"></i>CV-CN</a></li>
+      {% endif %}
       {% if author.kaggle %}
         <li><a href="https://kaggle.com/{{ author.kaggle }}"><i class="fab fa-fw fa-kaggle icon-pad-right" aria-hidden="true"></i>Kaggle</a></li>
       {% endif %}      

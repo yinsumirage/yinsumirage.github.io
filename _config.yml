@@ -1,21 +1,23 @@
 locale                   : "en-US"
-title                    : "WowPage"
+title                    : "Wentao Guo"
 title_separator          : "-"
-name                     : "Your Name"
-description              : &description "A clean academic homepage template."
+name                     : "Wentao Guo"
+description              : &description "Wentao Guo — Robotics and Embodied AI student focused on underactuated robotic hands, robot cars, and AI agent systems."
 url                      : ""
 baseurl                  : ""
-repository               : ""
+repository               : "yinsumirage/wentao"
 
 author:
-  avatar           : "1.png"
-  name             : "Your Name"
+  avatar           : "profile.jpg"
+  name             : "Wentao Guo"
   pronouns         :
-  bio              : "Student and researcher."
-  location         : "City, Country"
-  employer         : "Institution or Company"
+  bio              : "Robotics and Embodied AI student."
+  location         : "Beijing / Shenzhen, China"
+  employer         : "Beijing Institute of Technology"
   uri              :
-  email            : "name@example.com"
+  email            : "yinsumirage@gmail.com"
+  cv_en            : "/assets/cv/WentaoGuo_CV_EN.pdf"
+  cv_cn            : "/assets/cv/WentaoGuo_CV_CN.pdf"
 
   arxiv            :
   googlescholar    :
@@ -28,7 +30,7 @@ author:
   bitbucket        :
   codepen          :
   dribbble         :
-  github           :
+  github           : "yinsumirage"
   kaggle           :
   stackoverflow    :
 
