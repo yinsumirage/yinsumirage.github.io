@@ -1,0 +1,19 @@
+# UI text on blog post pages, keyed by the post's `lang` (set in _config.yml defaults).
+en:
+  html_lang: "en"
+  name: "English"
+  all_posts: "All posts"
+  min_read: "min read"
+  updated: "Updated"
+  older: "Older"
+  newer: "Newer"
+  date_format: "%b %-d, %Y"
+zh:
+  html_lang: "zh-CN"
+  name: "中文"
+  all_posts: "全部文章"
+  min_read: "分钟阅读"
+  updated: "更新于"
+  older: "上一篇"
+  newer: "下一篇"
+  date_format: "%Y年%-m月%-d日"

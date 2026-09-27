@@ -1,0 +1,78 @@
+---
+layout: single
+title: "Blog"
+permalink: /blog/
+author_profile: true
+stylesheets:
+  - /assets/css/home.css
+  - /assets/css/blog.css
+---
+
+{% include base_path %}
+{% include blog-articles.html %}
+
+<p class="blog-intro">Notes on robotics, embodied AI, data, and things I am building or learning along the way.</p>
+
+{% if blog_articles.size == 0 %}
+  <p class="blog-empty">No posts yet. Stay tuned.</p>
+{% else %}
+  {% assign tag_names = blog_articles | map: "tags" | join: "," | split: "," | uniq | sort_natural %}
+  {% if tag_names.size > 0 %}
+    <div class="pub-button-container blog-tag-filter" role="group" aria-label="Filter posts by tag">
+      <button class="pub-button active" data-tag="">All</button>
+      {% for tag in tag_names %}
+        <button class="pub-button" data-tag="{{ tag | xml_escape }}">{{ tag }}</button>
+      {% endfor %}
+    </div>
+  {% endif %}
+
+  {% assign posts_by_year = blog_articles | group_by_exp: "post", "post.date | date: '%Y'" %}
+  {% for year in posts_by_year %}
+    <section class="blog-year" data-blog-year>
+      <h2 class="blog-year-heading">{{ year.name }}</h2>
+      <ul class="blog-list">
+        {% for post in year.items %}
+          {% include blog-item.html post=post %}
+        {% endfor %}
+      </ul>
+    </section>
+  {% endfor %}
+
+  <script>
+  (function() {
+    var buttons = document.querySelectorAll('.blog-tag-filter .pub-button');
+    if (!buttons.length) return;
+
+    function applyTag(tag) {
+      buttons.forEach(function(button) {
+        button.classList.toggle('active', button.getAttribute('data-tag') === tag);
+      });
+      document.querySelectorAll('[data-blog-year]').forEach(function(section) {
+        var visible = 0;
+        section.querySelectorAll('.blog-item').forEach(function(item) {
+          var match = !tag || item.getAttribute('data-tags').indexOf('|' + tag + '|') !== -1;
+          item.hidden = !match;
+          if (match) visible += 1;
+        });
+        section.hidden = visible === 0;
+      });
+    }
+
+    buttons.forEach(function(button) {
+      button.addEventListener('click', function() {
+        var tag = button.getAttribute('data-tag');
+        applyTag(tag);
+        var url = new URL(window.location.href);
+        if (tag) url.searchParams.set('tag', tag); else url.searchParams.delete('tag');
+        history.replaceState(null, '', url);
+      });
+    });
+
+    var initial = new URLSearchParams(window.location.search).get('tag') || '';
+    var known = Array.prototype.some.call(buttons, function(button) {
+      return button.getAttribute('data-tag') === initial;
+    });
+    applyTag(known ? initial : '');
+  })();
+  </script>
+{% endif %}

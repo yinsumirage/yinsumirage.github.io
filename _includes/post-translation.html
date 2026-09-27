@@ -1,0 +1,11 @@
+{% comment %}
+  Sets `translation` to the other-language version of include.post, or nil.
+  An English post and its Chinese version share a filename (the Chinese one
+  lives under _posts/zh/), so they are paired by slug.
+{% endcomment %}
+{%- if include.post.lang == "zh" -%}
+  {%- assign translation_lang = "en" -%}
+{%- else -%}
+  {%- assign translation_lang = "zh" -%}
+{%- endif -%}
+{%- assign translation = site.posts | where: "slug", include.post.slug | where: "lang", translation_lang | first -%}

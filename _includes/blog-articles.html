@@ -1,0 +1,12 @@
+{% comment %}
+  Sets `blog_articles`: site.posts with one entry per article. When a post
+  has both versions, only the English one is listed (it links to the Chinese
+  one); Chinese-only posts are listed as they are.
+{% endcomment %}
+{%- assign blog_en_slugs = site.posts | where: "lang", "en" | map: "slug" -%}
+{%- assign blog_articles = "" | split: "" -%}
+{%- for post in site.posts -%}
+  {%- unless post.lang == "zh" and blog_en_slugs contains post.slug -%}
+    {%- assign blog_articles = blog_articles | push: post -%}
+  {%- endunless -%}
+{%- endfor -%}

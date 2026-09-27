@@ -3,6 +3,7 @@ permalink: /
 author_profile: true
 stylesheets:
   - /assets/css/home.css
+  - /assets/css/blog.css
 redirect_from:
   - /about/
   - /about.html
@@ -22,7 +23,7 @@ redirect_from:
 
 <section id="about" class="profile-intro">
   <p class="intro-lead">
-    I am Wentao Guo, an incoming first-year Ph.D. student at The University of Hong Kong, working on Robotics and Embodied AI. 
+    I am a Ph.D. student at The University of Hong Kong, working on Robotics and Embodied AI. 
   </p>
   <p class="intro-lead">
     My research aims to build stronger embodied models through data-centric exploration: understanding what data robots need, closing the loop between collection and policy improvement, and developing systems that can continuously refine behavior from real interaction.
@@ -36,12 +37,14 @@ redirect_from:
   <h2>News</h2>
   <div class="news-box">
     <ul class="news-list">
-      <li><span class="news-date"><em>2026.06</em></span> mu0 received Best Innovation Solution at the 2nd WBCD Winners @ ICRA 2026.</li>
-      <li><span class="news-date"><em>2026.02</em></span> Received Bronze Award at Deep Hackathon 2025.</li>
-      <li><span class="news-date"><em>2025.10</em></span> SCAL received Best Demo Award at IROS Workshop CIM.</li>
-      <li><span class="news-date"><em>2025.10</em></span> Hoecken-D Hand accepted to ROBIO 2025 as Oral.</li>
-      <li><span class="news-date"><em>2025.08</em></span> Won 1st Place at the ASME Student Mechanism & Robotics Design Competition.</li>
-      <li><span class="news-date"><em>2025.07</em></span> IROS 2025 first-author paper accepted as Oral.</li>
+      <li><span class="news-date"><em>2026.09</em></span> <a href="https://commonstackai.github.io/TwinRouterBench/" target="_blank" rel="noreferrer">TwinRouterBench</a> accepted to <strong>NeurIPS 2026</strong> Datasets &amp; Benchmarks Track.</li>
+      <li><span class="news-date"><em>2026.09</em></span> <a href="https://robolineage.github.io/" target="_blank" rel="noreferrer">RoboLineage</a> accepted to <strong>CoRL 2026</strong>. Congratulations to all co-authors!</li>
+      <li><span class="news-date"><em>2026.06</em></span> Won <strong>Best Innovation Solution</strong> at the <a href="https://wbcdcompetition.github.io/#Winners" target="_blank" rel="noreferrer">2nd WBCD Competition @ ICRA 2026</a> with mu0.</li>
+      <li><span class="news-date"><em>2026.02</em></span> Won <strong>Bronze Award</strong> at Deep Hackathon 2025.</li>
+      <li><span class="news-date"><em>2025.10</em></span> Won <strong>Best Demo Award</strong> at the <a href="https://cim-workshop.github.io/" target="_blank" rel="noreferrer">IROS 2025 Workshop CIM</a> with SCAL.</li>
+      <li><span class="news-date"><em>2025.10</em></span> <a href="https://arxiv.org/abs/2510.13553" target="_blank" rel="noreferrer">Hoecken-D Hand</a> accepted to <strong>ROBIO 2025</strong> (Oral).</li>
+      <li><span class="news-date"><em>2025.08</em></span> Won <strong>1st Place</strong> at the <a href="https://sites.google.com/site/asmemrc/design-competition-showcase/2025-finalists#h.2oibi1g704mf" target="_blank" rel="noreferrer">ASME Student Mechanism &amp; Robotics Design Competition 2025</a>.</li>
+      <li><span class="news-date"><em>2025.07</em></span> <a href="https://arxiv.org/abs/2510.13535" target="_blank" rel="noreferrer">Hockens-A Hand</a> accepted to <strong>IROS 2025</strong> (Oral).</li>
     </ul>
   </div>
 </section>
@@ -66,8 +69,8 @@ redirect_from:
       </div>
       <div class="education-info">
         <strong>Transcengram</strong><br>
-        <em>2025.10 - Present</em><br>
-        Algorithm Intern in <a href="https://transcengram.com/" target="_blank" rel="noreferrer">Transcengram</a>, Shenzhen Algorithm Department. Research on teleoperation and data collection.
+        <em>2025.10 - 2026.9</em><br>
+        Algorithm Intern in <a href="https://transcengram.com/" target="_blank" rel="noreferrer">Transcengram</a>, Shenzhen Algorithm Department. Research on teleoperation and data collection, which led to <a href="https://robolineage.github.io/" target="_blank" rel="noreferrer">RoboLineage</a> (CoRL 2026).
       </div>
     </div>
 
@@ -78,7 +81,7 @@ redirect_from:
       </div>
       <div class="education-info">
         <strong>X-Institute (X-Scholar)</strong><br>
-        <em>2024.10 - Present</em><br>
+        <em>2024.10 - 2026.8</em><br>
         Tsinghua University Tsien Excellence in Engineering Program (Joint Training), advised by <a href="https://scholar.google.com/citations?hl=zh-CN&amp;user=n-3doEMAAAAJ" target="_blank" rel="noreferrer">Wenzeng Zhang</a>. Research on underactuated hands and embodied AI policies
       </div>
     </div>
@@ -117,7 +120,7 @@ redirect_from:
             Agent-native lifecycle governance for robot policy iteration across collection, review, training, evaluation, and recollection.
           </p>
           <div class="pub-badge-row">
-            <span class="pub-list-badge">Preprint</span>
+            <span class="pub-list-badge">CoRL 2026</span>
           </div>
           <div class="link-row compact">
             <a class="homepage-link" href="https://arxiv.org/abs/2606.22142" target="_blank" rel="noreferrer">arXiv</a>
@@ -205,13 +208,13 @@ redirect_from:
   <div id="full-publications" class="publication-view" data-publication-view="list" hidden>
     <ul class="full-publication-list">
       <li>
-        <span class="pub-list-badge">Preprint</span>
+        <span class="pub-list-badge">CoRL 2026</span>
         <span class="pub-list-title">RoboLineage: Agent-Native Data Lifecycle Governance Across Robot Policy Iterations</span><br>
         <span class="pub-list-authors">Qian Luo, <strong>Wentao Guo</strong>, Zhennan Qin, Nanchun Guo, Yunhan Zhao, Yi Ma, Yanchao Yang<sup>†</sup>.</span>
         <span class="pub-list-links"><a href="https://arxiv.org/abs/2606.22142">[arXiv]</a><a href="https://robolineage.github.io/">[page]</a><a href="https://github.com/robolineage/robolineage">[code]</a><a href="https://robolineage.github.io/#videos">[video]</a></span>
       </li>
       <li>
-        <span class="pub-list-badge">Preprint</span>
+        <span class="pub-list-badge">NeurIPS 2026 D&amp;B Track</span>
         <span class="pub-list-title">TwinRouterBench: Fast Static and Live Dynamic Evaluation for Realistic Agentic LLM Routing</span><br>
         <span class="pub-list-authors">Pei Yang*, Wanyi Chen*, Tongyun Yang, Pengbin Feng, Jiarong Xing, <strong>Wentao Guo</strong>, Yuhang Yao, Yuhang Han, Hanchen Li, Xu Wang, Zeyu Wang, Jie Xiao, Anjie Yang, Liang Tian, Lynn Ai, Eric Yang, Tianyu Shi<sup>†</sup>.</span>
         <span class="pub-list-links"><a href="https://arxiv.org/abs/2605.18859">[arXiv]</a><a href="https://commonstackai.github.io/TwinRouterBench/">[page]</a><a href="https://github.com/CommonstackAI/TwinRouterBench">[code]</a></span>
@@ -251,7 +254,7 @@ redirect_from:
         <strong>mu0 · Deformable Object Manipulation</strong>
         <span class="status-pill">2026</span><br>
         <div class="project-badges">
-          <a href="https://wbcdcompetition.github.io/#Winners" target="_blank" rel="noreferrer">Best Innovation Solution · 2nd WBCD Winners @ ICRA 2026</a>
+          <a href="https://wbcdcompetition.github.io/#Winners" target="_blank" rel="noreferrer">Best Innovation Solution · 2nd WBCD Competition @ ICRA 2026</a>
         </div>
         <p>
           Designed and standardized a task-specific action workflow, collected UMI data, supplemented targeted data with DAgger, and fine-tuned the model for robust deformable-object manipulation.
@@ -374,7 +377,7 @@ redirect_from:
   <div class="award-year-view" data-award-year="2026">
     <h3 id="awards-2026" class="award-year-heading">2026</h3>
     <ul class="award-list">
-      <li><strong>Best Innovation Solution</strong>, <a href="https://wbcdcompetition.github.io/#Winners" target="_blank" rel="noreferrer">2nd WBCD Winners @ ICRA 2026</a> <span class="award-level">International</span></li>
+      <li><strong>Best Innovation Solution</strong>, <a href="https://wbcdcompetition.github.io/#Winners" target="_blank" rel="noreferrer">2nd WBCD Competition @ ICRA 2026</a> <span class="award-level">International</span></li>
       <li><strong>Bronze Award</strong>, Deep Hackathon 2025 <span class="award-level">National</span></li>
     </ul>
   </div>
@@ -382,7 +385,7 @@ redirect_from:
   <div class="award-year-view" data-award-year="2025">
     <h3 id="awards-2025" class="award-year-heading">2025</h3>
     <ul class="award-list">
-      <li><strong>Best Demo Award</strong>, <a href="https://cim-workshop.github.io/" target="_blank" rel="noreferrer">IROS Workshop CIM</a> <span class="award-level">International</span></li>
+      <li><strong>Best Demo Award</strong>, <a href="https://cim-workshop.github.io/" target="_blank" rel="noreferrer">IROS 2025 Workshop CIM</a> <span class="award-level">International</span></li>
       <li><strong>1st Place</strong>, <a href="https://sites.google.com/site/asmemrc/design-competition-showcase/2025-finalists#h.2oibi1g704mf" target="_blank" rel="noreferrer">ASME Student Mechanism & Robotics Design Competition</a> <span class="award-level">International</span></li>
       <li><strong>Meritorious Winner</strong>, Mathematical Contest in Modeling (MCM/ICM) <span class="award-level">International</span></li>
     </ul>
@@ -401,6 +404,19 @@ redirect_from:
     </ul>
   </div>
 </section>
+
+{% if site.posts.size > 0 %}
+<section id="blog" class="blog-home">
+  <h2>Blog</h2>
+  <ul class="blog-list">
+    {% include blog-articles.html %}
+    {% for post in blog_articles limit: 3 %}
+      {% include blog-item.html post=post date_format="%Y.%m.%d" %}
+    {% endfor %}
+  </ul>
+  <a class="blog-all-link" href="{{ '/blog/' | relative_url }}">All posts &rarr;</a>
+</section>
+{% endif %}
 
 <script>
 function filterPublications(event, type) {

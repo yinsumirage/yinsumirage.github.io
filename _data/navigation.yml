@@ -15,3 +15,8 @@ main:
 
   - title: "Awards"
     url: "/#awards"
+
+  # Hidden until the first post in _posts/ is published.
+  - title: "Blog"
+    url: "/blog/"
+    requires_posts: true

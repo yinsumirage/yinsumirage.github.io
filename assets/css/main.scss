@@ -10,6 +10,44 @@
  *
 */
 
+/* Nunito (variable, Latin subset), self-hosted so it also loads in mainland China.
+   Copyright The Nunito Project Authors, SIL Open Font License 1.1. */
+@font-face {
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 200 1000;
+  font-display: swap;
+  src: url("../fonts/nunito-latin-wght-normal.woff2") format("woff2-variations"),
+       url("../fonts/nunito-latin-wght-normal.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Nunito";
+  font-style: italic;
+  font-weight: 200 1000;
+  font-display: swap;
+  src: url("../fonts/nunito-latin-wght-italic.woff2") format("woff2-variations"),
+       url("../fonts/nunito-latin-wght-italic.woff2") format("woff2");
+}
+
+/* The site's sizes were tuned for the old fonts: Verdana for regular text
+   (x-height 0.547) and Arial Rounded MT Bold for bold text (0.5625). Nunito's
+   x-height is 0.50, so scale its glyphs to the old x-heights instead of
+   re-tuning every font-size. Microsoft YaHei is also 0.547, so Chinese text is
+   unaffected. Code, icon fonts and MathJax keep their own metrics. */
+html {
+  font-size-adjust: 0.547;
+}
+
+h1, h2, h3, h4, h5, h6, strong, b, .masthead__menu-item {
+  font-size-adjust: 0.5625;
+}
+
+code, pre, kbd, samp, mjx-container,
+.fa, .fas, .far, .fab, [class^="fa-"], [class*=" fa-"], .ai {
+  font-size-adjust: none;
+}
+
 @import "vendor/breakpoint/breakpoint"; // media query mixins
 @import "variables";
 @import "mixins";

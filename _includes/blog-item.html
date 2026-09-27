@@ -1,0 +1,21 @@
+{% include base_path %}
+{% assign post = include.post %}
+{% assign date_format = include.date_format | default: "%b %-d" %}
+{% include post-translation.html post=post %}
+<li class="blog-item" data-tags="|{{ post.tags | join: '|' | xml_escape }}|">
+  <time class="blog-item-date" datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: date_format }}</time>
+  <div class="blog-item-body">
+    <a class="blog-item-title" href="{{ base_path }}{{ post.url }}">{{ post.title }}</a>
+    {% assign summary = post.description | default: post.excerpt | strip_html | strip_newlines | truncate: 160 %}
+    {% if summary != "" %}<p class="blog-item-summary">{{ summary }}</p>{% endif %}
+    <div class="blog-item-meta">
+      <span>{% include post-read-time.html content=post.content %}</span>
+      {% if post.lang == "zh" %}
+        <span class="post-lang" lang="zh-CN">中文</span>
+      {% elsif translation %}
+        <a class="post-lang" href="{{ base_path }}{{ translation.url }}" hreflang="zh-CN" lang="zh-CN" title="Read in Chinese">中文</a>
+      {% endif %}
+      {% for tag in post.tags %}<span class="post-tag">{{ tag }}</span>{% endfor %}
+    </div>
+  </div>
+</li>
