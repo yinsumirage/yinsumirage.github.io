@@ -3,9 +3,13 @@ layout: compress
 ---
 
 {% include base_path %}
+{% assign html_lang = site.locale | slice: 0,2 %}
+{% if page.lang and site.data.blog_ui[page.lang] %}
+  {% assign html_lang = site.data.blog_ui[page.lang].html_lang %}
+{% endif %}
 
 <!doctype html>
-<html lang="{{ site.locale | slice: 0,2 }}" class="no-js">
+<html lang="{{ html_lang }}" class="no-js">
   <head>
     {% include head.html %}
     {% include head/custom.html %}

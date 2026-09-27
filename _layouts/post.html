@@ -97,7 +97,7 @@ layout: default
       {% endif %}
 
       <section class="page__content post-content" itemprop="articleBody">
-        {{ content }}
+        {{ content | replace: '<img ', '<img loading="lazy" decoding="async" ' }}
       </section>
 
       {% if older_post or newer_post %}

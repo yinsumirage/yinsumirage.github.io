@@ -111,7 +111,7 @@ redirect_from:
     <div class="publication-card">
       <div class="homepage-card-body">
         <div class="pub-media-rotator homepage-media" data-interval="4000">
-          <img src="assets/papers/26_robolineage/image/fig2.png" alt="RoboLineage lifecycle overview">
+          <img src="assets/papers/26_robolineage/image/fig2-card.webp" loading="lazy" decoding="async" alt="RoboLineage lifecycle overview">
         </div>
         <div>
           <strong>RoboLineage: Agent-Native Data Lifecycle Governance Across Robot Policy Iterations</strong><br>
@@ -135,7 +135,7 @@ redirect_from:
     <div class="publication-card">
       <div class="homepage-card-body">
         <div class="pub-media-rotator homepage-media" data-interval="4000">
-          <img src="assets/papers/26_icra/image/照片.png" alt="SCAL prototype">
+          <img src="assets/papers/26_icra/image/照片-card.webp" loading="lazy" decoding="async" alt="SCAL prototype">
         </div>
         <div>
           <strong>SCAL for Pinch-Lifting: Complementary Rotational and Linear Prototypes for Environment-Adaptive Grasping</strong><br>
@@ -160,7 +160,7 @@ redirect_from:
     <div class="publication-card">
       <div class="homepage-card-body">
         <div class="pub-media-rotator homepage-media" data-interval="4000">
-          <img src="assets/papers/25_robio/image/demo集合.png" alt="Hoecken-D hand demonstrations">
+          <img src="assets/papers/25_robio/image/demo集合-card.webp" loading="lazy" decoding="async" alt="Hoecken-D hand demonstrations">
         </div>
         <div>
           <strong>Hoecken-D Hand: A Novel Robotic Hand for Linear Parallel Pinching and Self-Adaptive Grasping</strong><br>
@@ -183,7 +183,7 @@ redirect_from:
     <div class="publication-card">
       <div class="homepage-card-body">
         <div class="pub-media-rotator homepage-media" data-interval="4000">
-          <img src="assets/papers/25_iros/image/抓取照片.png" alt="Hoeckens linkage hand grasping">
+          <img src="assets/papers/25_iros/image/抓取照片-card.webp" loading="lazy" decoding="async" alt="Hoeckens linkage hand grasping">
         </div>
         <div>
           <strong>A Novel Robot Hand with Hoeckens Linkages and Soft Phalanges for Scooping and Self-Adaptive Grasping in Environmental Constraints</strong><br>
@@ -248,7 +248,7 @@ redirect_from:
   <div class="project-card">
     <div class="homepage-card-body">
       <div class="pub-media-rotator homepage-media" data-interval="4000">
-        <img src="images/projects/26WBCD_mu0.png" alt="mu0 deformable object manipulation project">
+        <img src="images/projects/26WBCD_mu0-card.webp" loading="lazy" decoding="async" alt="mu0 deformable object manipulation project">
       </div>
       <div>
         <strong>mu0 · Deformable Object Manipulation</strong>
@@ -266,7 +266,7 @@ redirect_from:
   <div class="project-card">
     <div class="homepage-card-body">
       <div class="pub-media-rotator homepage-media" data-interval="4000">
-        <img src="images/projects/25AMSE.jpg" alt="Adaptive robotic grippers project">
+        <img src="images/projects/25AMSE-card.webp" loading="lazy" decoding="async" alt="Adaptive robotic grippers project">
       </div>
       <div>
         <strong>Adaptive Robotic Grippers for Multi-Mode Grasping with Pinching and Scooping under Environmental Constraints</strong>
@@ -286,7 +286,7 @@ redirect_from:
   <div class="project-card">
     <div class="homepage-card-body">
       <div class="pub-media-rotator homepage-media" data-interval="4000">
-        <img src="images/projects/MoYiXing.png" alt="MoYiXing modular robot car">
+        <img src="images/projects/MoYiXing-card.webp" loading="lazy" decoding="async" alt="MoYiXing modular robot car">
       </div>
       <div>
         <strong>MoYiXing Modular Robot Car (Lidar + 6-DOF Arm)</strong>
@@ -309,7 +309,7 @@ redirect_from:
   <div class="project-card">
     <div class="homepage-card-body">
       <div class="pub-media-rotator homepage-media" data-interval="4000">
-        <img src="images/projects/YiBao.png" alt="YiBao meeting agent">
+        <img src="images/projects/YiBao-card.webp" loading="lazy" decoding="async" alt="YiBao meeting agent">
       </div>
       <div>
         <strong>YiBao · Meeting Agent (On-device LLM + Local DB + RAG)</strong>
@@ -329,7 +329,7 @@ redirect_from:
   <div class="project-card">
     <div class="homepage-card-body">
       <div class="pub-media-rotator homepage-media" data-interval="4000">
-        <img src="images/projects/weather.png" alt="Digital twin and AI for grid resilience">
+        <img src="images/projects/weather-card.webp" loading="lazy" decoding="async" alt="Digital twin and AI for grid resilience">
       </div>
       <div>
         <strong>Yi-Dian-Yi-Di: Problem-Driven Digital Twin + Strong AI for Grid Resilience</strong>
@@ -348,7 +348,7 @@ redirect_from:
   <div class="project-card">
     <div class="homepage-card-body">
       <div class="pub-media-rotator homepage-media" data-interval="4000">
-        <img src="images/projects/sleep.png" alt="Sleep bias mitigation pipeline">
+        <img src="images/projects/sleep-card.webp" loading="lazy" decoding="async" alt="Sleep bias mitigation pipeline">
       </div>
       <div>
         <strong>Bias Mitigation Pipeline for Sleep-Focused LLM Tasks</strong>
