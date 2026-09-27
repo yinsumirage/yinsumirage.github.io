@@ -54,7 +54,7 @@ redirect_from:
   <div class="education-container">
     <div class="education-card">
       <div class="education-logos">
-        <img class="education-logo-wide" src="images/school_logo/hku_logo.png" alt="The University of Hong Kong logo">
+        <img class="education-logo-wide" src="images/school_logo/hku_logo-card.webp" loading="lazy" decoding="async" alt="The University of Hong Kong logo">
       </div>
       <div class="education-info">
         <strong>The University of Hong Kong</strong><br>
@@ -65,7 +65,7 @@ redirect_from:
 
     <div class="education-card">
       <div class="education-logos">
-        <img class="education-logo-wide" src="images/school_logo/transcengram_logo.png" alt="Transcengram logo">
+        <img class="education-logo-wide" src="images/school_logo/transcengram_logo-card.webp" loading="lazy" decoding="async" alt="Transcengram logo">
       </div>
       <div class="education-info">
         <strong>Transcengram</strong><br>
@@ -76,7 +76,7 @@ redirect_from:
 
     <div class="education-card">
       <div class="education-logos">
-        <img class="education-logo-wide" src="images/school_logo/x-institue_logo.jpg" alt="X-Institute logo">
+        <img class="education-logo-wide" src="images/school_logo/x-institue_logo-card.webp" loading="lazy" decoding="async" alt="X-Institute logo">
         <img src="images/school_logo/Tsinghua_University_Logo.svg" alt="Tsinghua University logo">
       </div>
       <div class="education-info">
