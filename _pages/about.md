@@ -23,7 +23,7 @@ redirect_from:
 
 <section id="about" class="profile-intro">
   <p class="intro-lead">
-    I am a Ph.D. student at The University of Hong Kong, working on Robotics and Embodied AI. 
+    I am a Ph.D. student at The University of Hong Kong, advised by <a href="https://yanchaoyang.github.io/" target="_blank" rel="noreferrer">Yanchao Yang</a>, working on Robotics and Embodied AI.
   </p>
   <p class="intro-lead">
     My research aims to build stronger embodied models through data-centric exploration: understanding what data robots need, closing the loop between collection and policy improvement, and developing systems that can continuously refine behavior from real interaction.
@@ -49,55 +49,18 @@ redirect_from:
   </div>
 </section>
 
-<section id="experience">
-  <h2>Experience</h2>
-  <div class="education-container">
-    <div class="education-card">
-      <div class="education-logos">
-        <img class="education-logo-wide" src="images/school_logo/hku_logo-card.webp" loading="lazy" decoding="async" alt="The University of Hong Kong logo">
-      </div>
-      <div class="education-info">
-        <strong>The University of Hong Kong</strong><br>
-        <em>2026.9 - Present</em><br>
-        Ph.D. student in Embodied AI, <a href="https://www.cds.hku.hk/" target="_blank" rel="noreferrer">School of Computing and Data Science (CDS)</a>, advised by <a href="https://yanchaoyang.github.io/" target="_blank" rel="noreferrer">Yanchao Yang</a>.
-      </div>
-    </div>
-
-    <div class="education-card">
-      <div class="education-logos">
-        <img class="education-logo-wide" src="images/school_logo/transcengram_logo-card.webp" loading="lazy" decoding="async" alt="Transcengram logo">
-      </div>
-      <div class="education-info">
-        <strong>Transcengram</strong><br>
-        <em>2025.10 - 2026.9</em><br>
-        Algorithm Intern in <a href="https://transcengram.com/" target="_blank" rel="noreferrer">Transcengram</a>, Shenzhen Algorithm Department. Research on teleoperation and data collection, which led to <a href="https://robolineage.github.io/" target="_blank" rel="noreferrer">RoboLineage</a> (CoRL 2026).
-      </div>
-    </div>
-
-    <div class="education-card">
-      <div class="education-logos">
-        <img class="education-logo-wide" src="images/school_logo/x-institue_logo-card.webp" loading="lazy" decoding="async" alt="X-Institute logo">
-        <img src="images/school_logo/Tsinghua_University_Logo.svg" alt="Tsinghua University logo">
-      </div>
-      <div class="education-info">
-        <strong>X-Institute (X-Scholar)</strong><br>
-        <em>2024.10 - 2026.8</em><br>
-        Tsinghua University Tsien Excellence in Engineering Program (Joint Training), advised by <a href="https://scholar.google.com/citations?hl=zh-CN&amp;user=n-3doEMAAAAJ" target="_blank" rel="noreferrer">Wenzeng Zhang</a>. Research on underactuated hands and embodied AI policies
-      </div>
-    </div>
-
-    <div class="education-card">
-      <div class="education-logos">
-        <img src="images/school_logo/bit_logo.svg" alt="Beijing Institute of Technology logo">
-      </div>
-      <div class="education-info">
-        <strong>Beijing Institute of Technology</strong><br>
-        <em>2022.8 - 2026.6</em><br>
-        School of Computer Science · Xu Teli Honors Program (B.Eng.). Dewin Scholarship.
-      </div>
-    </div>
-  </div>
+{% if site.posts.size > 0 %}
+<section id="blog" class="blog-home">
+  <h2>Blog</h2>
+  <ul class="blog-list">
+    {% include blog-articles.html %}
+    {% for post in blog_articles limit: 3 %}
+      {% include blog-item.html post=post date_format="%Y.%m.%d" %}
+    {% endfor %}
+  </ul>
+  <a class="blog-all-link" href="{{ '/blog/' | relative_url }}">All posts &rarr;</a>
 </section>
+{% endif %}
 
 <section id="publications">
   <h2>Publications</h2>
@@ -239,6 +202,56 @@ redirect_from:
         <span class="pub-list-links"><a href="assets/papers/25_iros/201866-3909.pdf">[PDF]</a><a href="https://arxiv.org/abs/2510.13535">[arXiv]</a><a href="https://www.youtube.com/watch?v=eQuu3pJjB0U">[video]</a><a href="assets/papers/25_iros/poster.jpg?view=poster">[poster]</a></span>
       </li>
     </ul>
+  </div>
+</section>
+
+<section id="experience">
+  <h2>Experience</h2>
+  <div class="education-container">
+    <div class="education-card">
+      <div class="education-logos">
+        <img class="education-logo-wide" src="images/school_logo/hku_logo-card.webp" loading="lazy" decoding="async" alt="The University of Hong Kong logo">
+      </div>
+      <div class="education-info">
+        <strong>The University of Hong Kong</strong><br>
+        <em>2026.9 - Present</em><br>
+        Ph.D. student in Embodied AI, <a href="https://www.cds.hku.hk/" target="_blank" rel="noreferrer">School of Computing and Data Science (CDS)</a>, advised by <a href="https://yanchaoyang.github.io/" target="_blank" rel="noreferrer">Yanchao Yang</a>.
+      </div>
+    </div>
+
+    <div class="education-card">
+      <div class="education-logos">
+        <img class="education-logo-wide" src="images/school_logo/transcengram_logo-card.webp" loading="lazy" decoding="async" alt="Transcengram logo">
+      </div>
+      <div class="education-info">
+        <strong>Transcengram</strong><br>
+        <em>2025.10 - 2026.9</em><br>
+        Algorithm Intern in <a href="https://transcengram.com/" target="_blank" rel="noreferrer">Transcengram</a>, Shenzhen Algorithm Department. Research on teleoperation and data collection, which led to <a href="https://robolineage.github.io/" target="_blank" rel="noreferrer">RoboLineage</a> (CoRL 2026).
+      </div>
+    </div>
+
+    <div class="education-card">
+      <div class="education-logos">
+        <img class="education-logo-wide" src="images/school_logo/x-institue_logo-card.webp" loading="lazy" decoding="async" alt="X-Institute logo">
+        <img src="images/school_logo/Tsinghua_University_Logo.svg" alt="Tsinghua University logo">
+      </div>
+      <div class="education-info">
+        <strong>X-Institute (X-Scholar)</strong><br>
+        <em>2024.10 - 2026.8</em><br>
+        Tsinghua University Tsien Excellence in Engineering Program (Joint Training), advised by <a href="https://scholar.google.com/citations?hl=zh-CN&amp;user=n-3doEMAAAAJ" target="_blank" rel="noreferrer">Wenzeng Zhang</a>. Research on underactuated hands and embodied AI policies
+      </div>
+    </div>
+
+    <div class="education-card">
+      <div class="education-logos">
+        <img src="images/school_logo/bit_logo.svg" alt="Beijing Institute of Technology logo">
+      </div>
+      <div class="education-info">
+        <strong>Beijing Institute of Technology</strong><br>
+        <em>2022.8 - 2026.6</em><br>
+        School of Computer Science · Xu Teli Honors Program (B.Eng.). Dewin Scholarship.
+      </div>
+    </div>
   </div>
 </section>
 
@@ -406,19 +419,6 @@ redirect_from:
     </ul>
   </div>
 </section>
-
-{% if site.posts.size > 0 %}
-<section id="blog" class="blog-home">
-  <h2>Blog</h2>
-  <ul class="blog-list">
-    {% include blog-articles.html %}
-    {% for post in blog_articles limit: 3 %}
-      {% include blog-item.html post=post date_format="%Y.%m.%d" %}
-    {% endfor %}
-  </ul>
-  <a class="blog-all-link" href="{{ '/blog/' | relative_url }}">All posts &rarr;</a>
-</section>
-{% endif %}
 
 <script>
 function filterPublications(event, type) {
