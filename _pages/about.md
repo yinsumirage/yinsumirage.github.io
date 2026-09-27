@@ -294,8 +294,10 @@ redirect_from:
         <div class="project-badges">
           <span>National 1st Prize · RoboCup Innovation</span>
           <span>National 1st Prize · University Robot Creative Competition</span>
+          <!-- Hidden to keep the card to the two 1st prizes; both are still listed under Awards (2024).
           <span>National 2nd Prize · Robot Combat</span>
           <span>National 2nd Prize · International Youth AI Competition</span>
+          -->
         </div>
         <p>
           Modular design with navigation, grasping, perception, monitoring, cleaning, and dialogue. Supports modular camera setup with AI recognition. Implemented DQN habit-learning and semi-autonomous execution on Jetson Nano.
