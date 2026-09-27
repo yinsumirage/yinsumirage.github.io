@@ -7,6 +7,7 @@ en:
   updated: "Updated"
   older: "Older"
   newer: "Newer"
+  toc: "Contents"
   date_format: "%b %-d, %Y"
 zh:
   html_lang: "zh-CN"
@@ -16,4 +17,5 @@ zh:
   updated: "更新于"
   older: "上一篇"
   newer: "下一篇"
+  toc: "目录"
   date_format: "%Y年%-m月%-d日"

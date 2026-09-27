@@ -44,6 +44,10 @@ English/中文 switcher, and post lists show the article once. A post that only 
 in `_posts/zh/` is listed on its own with a 中文 label. Keep tags in English so the tag
 filter groups both languages together. Post-page UI text lives in `_data/blog_ui.yml`.
 
+Posts with at least three `##`/`###` sections get a table of contents in the left
+column in place of the author profile (a collapsible box on phones), and the byline
+names the author. Set `toc: false` in the front matter to turn it off.
+
 Put images in `assets/blog/<slug>/`. `_drafts/writing-guide.md` is a formatting
 reference (images, code, math, tables) that is never published; preview drafts with
 `bundle exec jekyll serve --drafts`. The **Blog** link in the top nav appears
