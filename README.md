@@ -23,6 +23,16 @@ The local site is usually available at `http://127.0.0.1:4000/`.
 - `assets/cv`, `assets/img`, `assets/papers`: CVs, images, PDFs, videos, and paper media.
 - `_posts/` (English) and `_posts/zh/` (Chinese), `_pages/blog.html`, `_layouts/post.html`, `assets/css/blog.css`: the blog.
 
+## Homepage Card Images
+
+Publication and project cards load a small `<name>-card.webp` next to the original
+image (the originals are several MB but the cards are only 320px wide). After adding
+or replacing a card image, regenerate its card copy and point `_pages/about.md` at it:
+
+```bash
+ffmpeg -i images/projects/foo.png -vf "scale='min(720,iw)':'min(405,ih)':force_original_aspect_ratio=decrease" -pix_fmt yuva420p -c:v libwebp -quality 82 images/projects/foo-card.webp
+```
+
 ## Writing a Blog Post
 
 Create `_posts/YYYY-MM-DD-slug.md`; it is published at `/blog/YYYY/slug/`.
