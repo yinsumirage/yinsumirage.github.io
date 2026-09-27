@@ -418,6 +418,130 @@ a.post-lang:hover {
   line-height: 1.4;
 }
 
+/* ---------- Table of contents (built by assets/js/post-toc.js) ---------- */
+
+/* Leave room for the fixed masthead when jumping to a heading. */
+.post-content h2,
+.post-content h3,
+.post-content h4 {
+  scroll-margin-top: 84px;
+}
+
+.post-toc-list,
+.post-toc-list ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.post-toc-list ol {
+  margin: 1px 0 3px;
+  padding-left: 12px;
+}
+
+.post-toc-list li {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.45;
+}
+
+.post-toc-list a {
+  display: block;
+  padding: 3px 0 3px 10px;
+  border-left: 2px solid transparent;
+  color: #6b7280 !important;
+  text-decoration: none !important;
+}
+
+.post-toc-list > li > a {
+  color: var(--heading-soft) !important;
+  font-weight: 650;
+}
+
+.post-toc-list a:hover {
+  color: var(--accent-strong) !important;
+}
+
+.post-toc-list a.is-active {
+  border-left-color: var(--accent);
+  color: var(--accent-muted) !important;
+}
+
+/* Narrow screens: collapsible box between the header and the post. */
+.post-toc-inline {
+  margin: -8px 0 26px;
+  padding: 10px 14px;
+  border: 1px solid #ebe8fb;
+  border-radius: 10px;
+  background: var(--accent-soft);
+}
+
+.post-toc-inline summary {
+  color: var(--heading-soft);
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.post-toc-inline[open] summary {
+  margin-bottom: 8px;
+}
+
+/* Desktop: the TOC takes the author profile's place in the left column, so it
+   reuses the .sidebar box (fixed, full height, scrolls on its own) and the page
+   keeps exactly the same geometry as the homepage. */
+.post-toc-rail {
+  padding-bottom: 24px;
+  overscroll-behavior: contain;
+}
+
+@media (min-width: 1025px) {
+  /* The theme leaves a fixed sidebar at its in-flow offset, which pushes the
+     bottom of a 100vh box off screen. Pin it to the top instead; its top
+     padding already clears the masthead. */
+  .post-toc-rail {
+    top: 0;
+  }
+}
+
+.post-toc-rail .post-toc-title {
+  margin: 36px 0 8px 12px;
+  color: #9aa0a6;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.4;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.post-toc-rail .post-toc-list ol li {
+  font-size: 13px;
+}
+
+@media (min-width: 1025px) {
+  .post-toc-inline {
+    display: none !important;
+  }
+}
+
+/* Narrow screens: the left column stacks above the post, so drop it and use
+   the collapsible box instead; the author is already named in the byline. */
+@media (max-width: 1024px) {
+  .post-toc-rail,
+  .post-author-sidebar {
+    display: none !important;
+  }
+}
+
+.post-author {
+  color: var(--heading-soft) !important;
+  font-weight: 700;
+}
+
+.post-author:hover {
+  color: var(--accent-strong) !important;
+}
+
 @media (max-width: 720px) {
   .blog-item,
   .blog-home .blog-item {
