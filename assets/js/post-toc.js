@@ -14,8 +14,11 @@
   });
   if (headings.length < 3) return;
 
-  // Keep in sync with the scroll-margin-top on .post-content headings.
-  var OFFSET = 84;
+  // Clearance under the fixed masthead, which is taller on phones (two rows).
+  var masthead = document.querySelector('.masthead');
+  function offset() {
+    return (masthead ? masthead.offsetHeight : 70) + 14;
+  }
   var linksById = {};
 
   function labelOf(heading) {
@@ -29,7 +32,7 @@
     // percent-encoded (e.g. Chinese) ids.
     event.preventDefault();
     event.stopImmediatePropagation();
-    window.scrollTo({ top: heading.getBoundingClientRect().top + window.pageYOffset - OFFSET, behavior: 'smooth' });
+    window.scrollTo({ top: heading.getBoundingClientRect().top + window.pageYOffset - offset(), behavior: 'smooth' });
     history.replaceState(null, '', '#' + heading.id);
   }
 
@@ -87,7 +90,7 @@
     ticking = false;
     var current = null;
     for (var i = 0; i < headings.length; i++) {
-      if (headings[i].getBoundingClientRect().top - OFFSET - 16 > 0) break;
+      if (headings[i].getBoundingClientRect().top - offset() - 16 > 0) break;
       current = headings[i].id;
     }
     // The last sections may be too short to ever reach the top of the window.

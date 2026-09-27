@@ -424,7 +424,7 @@ a.post-lang:hover {
 .post-content h2,
 .post-content h3,
 .post-content h4 {
-  scroll-margin-top: 84px;
+  scroll-margin-top: calc(var(--masthead-offset, 80px) + 4px);
 }
 
 .post-toc-list,

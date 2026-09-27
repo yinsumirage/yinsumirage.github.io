@@ -21,4 +21,40 @@
       </nav>
     </div>
   </div>
+
+  {% comment %}Phones: every section on a second, swipeable row instead of the "more" menu (see _masthead.scss).{% endcomment %}
+  <nav class="masthead__tabs" aria-label="Sections">
+    {% for link in site.data.navigation.main %}
+      {% if link.requires_posts and site.posts.size == 0 %}{% continue %}{% endif %}
+      {% if link.url contains 'http' %}
+        {% assign domain = '' %}
+      {% else %}
+        {% assign domain = base_path %}
+      {% endif %}
+      <a href="{{ domain }}{{ link.url }}"{% if link.url == "/blog/" and page.url contains "/blog/" %} aria-current="page"{% endif %}>{{ link.title }}</a>
+    {% endfor %}
+  </nav>
 </div>
+
+<script>
+  // Same-page section links on the phone row: scroll below the (taller) masthead.
+  // Registered before the theme's jQuery smooth-scroll, whose fixed 65px offset
+  // would leave the heading under the two-row header.
+  (function () {
+    // Bound on each link (not delegated) so it runs before the theme's own
+    // per-link handler and can stop it.
+    Array.prototype.forEach.call(document.querySelectorAll('.masthead__tabs a'), function (link) {
+      link.addEventListener('click', function (event) {
+        if (!link.hash || link.pathname !== window.location.pathname) return;
+        var target = document.getElementById(decodeURIComponent(link.hash.slice(1)));
+        if (!target) return;
+        event.preventDefault();
+        event.stopImmediatePropagation();
+        var masthead = document.querySelector('.masthead');
+        var offset = (masthead ? masthead.offsetHeight : 70) + 12;
+        window.scrollTo({ top: target.getBoundingClientRect().top + window.pageYOffset - offset, behavior: 'smooth' });
+        history.replaceState(null, '', link.hash);
+      });
+    });
+  })();
+</script>

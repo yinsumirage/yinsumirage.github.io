@@ -93,9 +93,12 @@ facebook:
   publisher              :
 og_image                 :
 social:
-  type                   :
-  name                   :
-  links                  : []
+  type                   : Person
+  name                   : "Wentao Guo"
+  links:                   # "sameAs" profiles for search engines
+    - "https://github.com/yinsumirage"
+    - "https://scholar.google.com/citations?user=Ky84MtsAAAAJ"
+    - "https://www.xiaohongshu.com/user/profile/671921b8000000001d021c3b"
 
 analytics:
   provider               : false
@@ -247,12 +250,6 @@ whitelist:
   - jekyll-feed
   - jemoji
 
-category_archive:
-  type: liquid
-  path: /categories/
-tag_archive:
-  type: liquid
-  path: /tags/
 
 compress_html:
   clippings: all
