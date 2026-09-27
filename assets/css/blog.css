@@ -1,0 +1,428 @@
+/* Blog index and post pages. Loaded after home.css, reuses its variables. */
+
+.blog-item[hidden],
+.blog-year[hidden] {
+  display: none !important;
+}
+
+/* The desktop sidebar is position: fixed, so short pages would pull the
+   footer up underneath it. Keep the footer below the fold like on the homepage. */
+@media (min-width: 1025px) {
+  #main {
+    min-height: 100vh;
+  }
+}
+
+/* ---------- Blog index ---------- */
+
+.blog-intro {
+  color: var(--text);
+  font-size: 17px;
+  line-height: 1.6;
+}
+
+.blog-empty {
+  padding: 18px 20px;
+  border-radius: 10px;
+  background: var(--accent-soft);
+  color: var(--accent-muted);
+}
+
+.blog-tag-filter {
+  margin: 14px 0 6px;
+}
+
+.blog-tag-filter .pub-button {
+  padding: 5px 13px;
+  font-size: 14px;
+}
+
+.page__content .blog-year-heading {
+  margin: 28px 0 4px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid #eceaf7;
+  color: var(--accent);
+  font-size: 1.05em;
+  font-weight: 700;
+}
+
+.blog-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.blog-item {
+  display: grid;
+  grid-template-columns: 64px minmax(0, 1fr);
+  gap: 16px;
+  margin: 0;
+  padding: 14px 0;
+  border-bottom: 1px dashed #eceaf7;
+}
+
+.blog-item:last-child {
+  border-bottom: 0;
+}
+
+.blog-item-date {
+  padding-top: 3px;
+  color: #9aa0a6;
+  font-size: 14px;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+.page__content a.blog-item-title {
+  color: var(--heading-soft);
+  font-size: 1.08em;
+  font-weight: 700;
+  line-height: 1.4;
+  text-decoration: none;
+}
+
+.page__content a.blog-item-title:hover {
+  color: var(--accent-strong);
+}
+
+.page__content .blog-item-summary {
+  margin: 4px 0 6px;
+  color: var(--text);
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.blog-item-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+  color: #9aa0a6;
+  font-size: 13px;
+}
+
+.blog-item-meta > span:first-child {
+  margin-right: 4px;
+}
+
+/* ---------- Homepage "Blog" section ---------- */
+
+.blog-home .blog-item {
+  grid-template-columns: 92px minmax(0, 1fr);
+}
+
+.blog-home .blog-item-date {
+  color: var(--accent);
+  font-style: italic;
+}
+
+.page__content a.blog-all-link {
+  display: inline-block;
+  margin-top: 8px;
+  color: var(--accent-muted);
+  font-size: 15px;
+  font-weight: 600;
+}
+
+/* ---------- Tags (shared) ---------- */
+
+.post-tag {
+  display: inline-block;
+  padding: 1px 8px;
+  border: 1px solid var(--accent-border);
+  border-radius: 999px;
+  background: var(--accent-soft);
+  color: var(--accent-muted) !important;
+  font-size: 12px;
+  font-weight: 650;
+  line-height: 1.5;
+  text-decoration: none !important;
+}
+
+a.post-tag:hover {
+  border-color: var(--accent);
+}
+
+/* Language chip on list items: "also in Chinese" link or "Chinese only" label. */
+.post-lang {
+  display: inline-block;
+  padding: 1px 8px;
+  border: 1px solid var(--accent-border);
+  border-radius: 999px;
+  background: #fff;
+  color: var(--accent) !important;
+  font-size: 12px;
+  font-weight: 650;
+  line-height: 1.5;
+  text-decoration: none !important;
+}
+
+a.post-lang:hover {
+  border-color: var(--accent);
+  background: var(--accent-soft);
+}
+
+/* ---------- Post page ---------- */
+
+.post .page__inner-wrap {
+  max-width: 780px;
+}
+
+.post-topbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 18px;
+}
+
+.post-back {
+  display: inline-block;
+  color: var(--accent-muted);
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.post-lang-switch {
+  display: inline-flex;
+  padding: 2px;
+  border: 1px solid var(--accent-border);
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 650;
+  line-height: 1.5;
+}
+
+.post-lang-switch a,
+.post-lang-switch span {
+  padding: 2px 12px;
+  border-radius: 999px;
+}
+
+.post-lang-switch a {
+  color: var(--accent-muted);
+  text-decoration: none;
+}
+
+.post-lang-switch a:hover {
+  background: var(--accent-soft);
+  color: var(--accent-strong);
+}
+
+.post-lang-switch [aria-current] {
+  background: var(--accent);
+  color: #fff;
+}
+
+.post-header {
+  margin-bottom: 28px;
+}
+
+.post-title {
+  margin: 0 0 10px;
+  color: var(--heading);
+  font-size: 2em;
+  font-weight: 750;
+  line-height: 1.25;
+}
+
+.post-meta {
+  margin: 0 0 10px;
+  color: #80868b;
+  font-size: 14px;
+}
+
+.post-meta-sep {
+  margin: 0 6px;
+}
+
+.post-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.post-content {
+  color: #3c4043;
+  font-family: var(--font-sans);
+  font-size: 17px;
+  line-height: 1.8;
+  overflow-wrap: break-word;
+}
+
+.post-content h2,
+.post-content h3,
+.post-content h4 {
+  margin: 1.8em 0 0.6em;
+  color: var(--heading);
+  line-height: 1.35;
+}
+
+.post-content h2 {
+  border-bottom-color: #eceaf7;
+  font-size: 1.45em;
+}
+
+.post-content h3 {
+  font-size: 1.2em;
+}
+
+.post-content h4 {
+  font-size: 1.05em;
+}
+
+.post-content p,
+.post-content li {
+  font-size: 1em;
+}
+
+.post-content a {
+  color: var(--accent-muted);
+  text-decoration: underline !important;
+  text-decoration-color: var(--accent-border) !important;
+  text-underline-offset: 3px;
+}
+
+.post-content a:hover {
+  color: var(--accent-strong);
+  text-decoration-color: currentColor !important;
+}
+
+.post-content img,
+.post-content video {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 1.4em auto;
+  border-radius: 8px;
+}
+
+.post-content figure {
+  margin: 1.6em 0;
+  text-align: center;
+}
+
+.post-content figure img {
+  margin-bottom: 0.4em;
+}
+
+.post-content figcaption {
+  color: #80868b;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.post-content blockquote {
+  margin: 1.4em 0;
+  padding: 0.4em 1em;
+  border-left: 3px solid var(--accent);
+  background: var(--accent-soft);
+  border-radius: 0 8px 8px 0;
+  color: var(--text);
+  font-style: normal;
+}
+
+.post-content blockquote p:last-child {
+  margin-bottom: 0;
+}
+
+.post-content :not(pre) > code {
+  padding: 0.1em 0.35em;
+  border-radius: 4px;
+  background: #f3f2fb;
+  color: #5b4fd1;
+  font-size: 0.88em;
+}
+
+.post-content pre,
+.post-content .highlight {
+  border-radius: 8px;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* Long display equations scroll inside their own box instead of widening the page on phones. */
+.post-content mjx-container[display="true"] {
+  max-width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 2px 0;
+}
+
+.post-content table {
+  display: block;
+  overflow-x: auto;
+  font-size: 15px;
+}
+
+.post-content hr {
+  margin: 2.2em 0;
+  border: 0;
+  border-top: 1px solid #eceaf7;
+}
+
+.post-nav {
+  clear: both;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  margin-top: 44px;
+  padding-top: 22px;
+  border-top: 1px solid #eceaf7;
+}
+
+.post-nav-link {
+  display: block;
+  padding: 12px 14px;
+  border: 1px solid #e8e6f5;
+  border-radius: 10px;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.post-nav-link:hover {
+  border-color: var(--accent-border);
+  box-shadow: 0 6px 14px rgba(139, 124, 246, 0.12);
+}
+
+.post-nav-next {
+  grid-column: 2;
+  text-align: right;
+}
+
+.post-nav-label {
+  display: block;
+  color: #9aa0a6;
+  font-size: 13px;
+}
+
+.post-nav-title {
+  display: block;
+  color: var(--heading-soft);
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+@media (max-width: 720px) {
+  .blog-item,
+  .blog-home .blog-item {
+    grid-template-columns: 1fr;
+    gap: 2px;
+  }
+
+  .post-title {
+    font-size: 1.6em;
+  }
+
+  .post-content {
+    font-size: 16px;
+  }
+
+  .post-nav {
+    grid-template-columns: 1fr;
+  }
+
+  .post-nav-next {
+    grid-column: auto;
+  }
+}

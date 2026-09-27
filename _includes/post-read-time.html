@@ -1,0 +1,33 @@
+{% comment %}
+  Reading time for English, Chinese, and mixed posts.
+  - LaTeX source is not prose: each display equation \[...\] counts as
+    10 seconds and inline math \(...\) is dropped.
+  - Jekyll 3's number_of_words splits on whitespace, so a Chinese paragraph
+    counts as one word. CJK characters are counted on their own: url_encode
+    turns each one into %XX%XX%XX (9 chars) and leaves letters alone, so the
+    length difference divided by 8 is roughly the CJK character count.
+  - Chinese is read at 400 characters/minute, words at site.words_per_minute.
+  Pass label= to localize "min read".
+{% endcomment %}
+{%- assign rt_parts = include.content | split: "\[" -%}
+{%- assign rt_display = rt_parts.size | minus: 1 | at_least: 0 -%}
+{%- capture rt_text -%}
+  {%- for rt_part in rt_parts -%}
+    {%- if forloop.first -%}{{ rt_part }}{%- else -%}{{ rt_part | append: " " | split: "\]" | last }}{%- endif -%}
+  {%- endfor -%}
+{%- endcapture -%}
+{%- assign rt_parts = rt_text | split: "\(" -%}
+{%- capture rt_text -%}
+  {%- for rt_part in rt_parts -%}
+    {%- if forloop.first -%}{{ rt_part }}{%- else -%}{{ rt_part | append: " " | split: "\)" | last }}{%- endif -%}
+  {%- endfor -%}
+{%- endcapture -%}
+{%- assign rt_text = rt_text | strip_html -%}
+{%- assign rt_chars = rt_text | size -%}
+{%- assign rt_cjk = rt_text | url_encode | size | minus: rt_chars | divided_by: 8 -%}
+{%- assign rt_words = rt_text | number_of_words -%}
+{%- assign rt_seconds = rt_cjk | times: 60 | divided_by: 400 -%}
+{%- assign rt_seconds = rt_words | times: 60 | divided_by: site.words_per_minute | plus: rt_seconds -%}
+{%- assign rt_seconds = rt_display | times: 10 | plus: rt_seconds -%}
+{%- assign rt_minutes = rt_seconds | plus: 30 | divided_by: 60 | at_least: 1 -%}
+{{ rt_minutes }} {{ include.label | default: "min read" }}

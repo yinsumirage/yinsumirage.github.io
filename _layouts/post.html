@@ -1,0 +1,93 @@
+---
+layout: default
+---
+
+{% include base_path %}
+{% assign ui = site.data.blog_ui[page.lang] | default: site.data.blog_ui.en %}
+{% comment %}Drafts have no filename date in Jekyll 3, so preview them as today.{% endcomment %}
+{% assign post_date = page.date | default: site.time %}
+{% include post-translation.html post=page %}
+
+{% comment %}Older/newer links stay within the post's own language.{% endcomment %}
+{% assign same_lang_posts = site.posts | where: "lang", page.lang %}
+{% assign newer_post = nil %}
+{% assign older_post = nil %}
+{% for p in same_lang_posts %}
+  {% if p.url == page.url %}
+    {% if forloop.index0 > 0 %}
+      {% assign newer_index = forloop.index0 | minus: 1 %}
+      {% assign newer_post = same_lang_posts[newer_index] %}
+    {% endif %}
+    {% assign older_post = same_lang_posts[forloop.index] %}
+  {% endif %}
+{% endfor %}
+
+<div id="main" role="main">
+  {% include sidebar.html %}
+
+  <article class="page post" lang="{{ ui.html_lang }}" itemscope itemtype="http://schema.org/BlogPosting">
+    {% if page.excerpt %}<meta itemprop="description" content="{{ page.description | default: page.excerpt | strip_html | strip_newlines | escape_once }}">{% endif %}
+    {% if page.last_modified_at %}<meta itemprop="dateModified" content="{{ page.last_modified_at | date_to_xmlschema }}">{% endif %}
+
+    <div class="page__inner-wrap">
+      <div class="post-topbar">
+        <a class="post-back" href="{{ base_path }}/blog/">&larr; {{ ui.all_posts }}</a>
+        {% if translation %}
+          {% assign other_ui = site.data.blog_ui[translation.lang] %}
+          <nav class="post-lang-switch" aria-label="Language">
+            {% if page.lang == "zh" %}
+              <a href="{{ base_path }}{{ translation.url }}" hreflang="{{ other_ui.html_lang }}" lang="{{ other_ui.html_lang }}">{{ other_ui.name }}</a>
+              <span aria-current="page">{{ ui.name }}</span>
+            {% else %}
+              <span aria-current="page">{{ ui.name }}</span>
+              <a href="{{ base_path }}{{ translation.url }}" hreflang="{{ other_ui.html_lang }}" lang="{{ other_ui.html_lang }}">{{ other_ui.name }}</a>
+            {% endif %}
+          </nav>
+        {% endif %}
+      </div>
+
+      <header class="post-header">
+        <h1 class="post-title" itemprop="headline">{{ page.title }}</h1>
+        <p class="post-meta">
+          <time datetime="{{ post_date | date_to_xmlschema }}" itemprop="datePublished">{{ post_date | date: ui.date_format }}</time>
+          <span class="post-meta-sep" aria-hidden="true">&middot;</span>
+          <span>{% include post-read-time.html content=content label=ui.min_read %}</span>
+          {% if page.last_modified_at %}
+            <span class="post-meta-sep" aria-hidden="true">&middot;</span>
+            <span>{{ ui.updated }} {{ page.last_modified_at | date: ui.date_format }}</span>
+          {% endif %}
+        </p>
+        {% if page.tags.size > 0 %}
+          <div class="post-tags">
+            {% for tag in page.tags %}
+              <a class="post-tag" href="{{ base_path }}/blog/?tag={{ tag | url_encode }}">{{ tag }}</a>
+            {% endfor %}
+          </div>
+        {% endif %}
+      </header>
+
+      <section class="page__content post-content" itemprop="articleBody">
+        {{ content }}
+      </section>
+
+      {% if older_post or newer_post %}
+        <nav class="post-nav" aria-label="More posts">
+          {% if older_post %}
+            <a class="post-nav-link post-nav-prev" href="{{ base_path }}{{ older_post.url }}">
+              <span class="post-nav-label">&larr; {{ ui.older }}</span>
+              <span class="post-nav-title">{{ older_post.title }}</span>
+            </a>
+          {% else %}
+            <span></span>
+          {% endif %}
+          {% if newer_post %}
+            <a class="post-nav-link post-nav-next" href="{{ base_path }}{{ newer_post.url }}">
+              <span class="post-nav-label">{{ ui.newer }} &rarr;</span>
+              <span class="post-nav-title">{{ newer_post.title }}</span>
+            </a>
+          {% endif %}
+        </nav>
+      {% endif %}
+    </div>
+  </article>
+</div>

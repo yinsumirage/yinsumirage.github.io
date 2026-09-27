@@ -20,6 +20,15 @@
 <meta name="msapplication-config" content="{{ base_path }}/images/browserconfig.xml?v=M44lzPylqQ">
 <meta name="theme-color" content="#ffffff">
 <link rel="stylesheet" href="{{ base_path }}/assets/css/academicons.css"/>
+<link rel="preload" href="{{ base_path }}/assets/fonts/nunito-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+
+{% if page.collection == "posts" %}
+  {% include post-translation.html post=page %}
+  {% if translation %}
+<link rel="alternate" hreflang="{{ site.data.blog_ui[page.lang].html_lang }}" href="{{ page.url | absolute_url }}">
+<link rel="alternate" hreflang="{{ site.data.blog_ui[translation.lang].html_lang }}" href="{{ translation.url | absolute_url }}">
+  {% endif %}
+{% endif %}
 
 
 <!-- Support for MatJax -->

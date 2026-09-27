@@ -2,7 +2,7 @@ locale                   : "en-US"
 title                    : "Wentao Guo"
 title_separator          : "-"
 name                     : "Wentao Guo"
-description              : "Wentao Guo - Robotics and Embodied AI student focused on underactuated robotic hands, robot cars, and LLM-based agent systems."
+description              : "Wentao Guo - Ph.D. student at The University of Hong Kong working on Robotics and Embodied AI, focused on data-centric robot learning and task-aware robotic hands."
 url                      : "https://yinsumirage.github.io"
 baseurl                  : ""
 repository               : "yinsumirage/yinsumirage.github.io"
@@ -43,7 +43,7 @@ author:
 
 teaser                   :
 breadcrumbs              : false
-words_per_minute         : 160
+words_per_minute         : 250
 future                   : true
 read_more                : "disabled"
 talkmap_link             : false
@@ -174,12 +174,20 @@ defaults:
       path: ""
       type: posts
     values:
-      layout: single
+      layout: post
+      permalink: /blog/:year/:title/
+      lang: en
       author_profile: true
-      read_time: true
-      comments: true
-      share: true
-      related: true
+      stylesheets:
+        - /assets/css/home.css
+        - /assets/css/blog.css
+  # Chinese versions: same filename as the English post, under _posts/zh/.
+  - scope:
+      path: "_posts/zh"
+      type: posts
+    values:
+      permalink: /blog/:year/:title/zh/
+      lang: zh
   - scope:
       path: ""
       type: pages
