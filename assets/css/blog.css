@@ -298,13 +298,28 @@ a.post-lang:hover {
   border-radius: 8px;
 }
 
+/* The theme makes figure a flex box, so the image's own top margin would stack
+   on top of the figure's margin instead of collapsing into it. */
 .post-content figure {
+  display: block;
   margin: 1.6em 0;
   text-align: center;
 }
 
+/* The theme also sets width: 100%, which blows small images up past their
+   native resolution. Let them shrink to fit but never grow. */
 .post-content figure img {
-  margin-bottom: 0.4em;
+  width: auto;
+  margin: 0 auto 0.4em;
+}
+
+/* <figure class="medium"> / <figure class="narrow"> for tall or low-resolution images. */
+.post-content figure.medium img {
+  max-width: min(100%, 600px);
+}
+
+.post-content figure.narrow img {
+  max-width: min(100%, 460px);
 }
 
 .post-content figcaption {

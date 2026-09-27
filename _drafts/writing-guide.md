@@ -50,6 +50,8 @@ _posts/zh/2026-10-01-my-post.md   →  /blog/2026/my-post/zh/
 </figure>
 ```
 
+图片默认撑满正文宽度。偏高或分辨率低的图可以写成 `<figure class="medium">`（最宽 600px）或 `<figure class="narrow">`（最宽 460px）。
+
 ## 代码
 
 Inline code looks like `policy.act(obs)`, and fenced blocks get syntax highlighting:
