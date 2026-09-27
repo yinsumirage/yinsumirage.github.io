@@ -4,11 +4,11 @@ main:
   - title: "News"
     url: "/#news"
 
-  - title: "Experience"
-    url: "/#experience"
-
   - title: "Publications"
     url: "/#publications"
+
+  - title: "Experience"
+    url: "/#experience"
 
   - title: "Projects"
     url: "/#projects"
