@@ -374,6 +374,14 @@ h3,
   margin-bottom: 12px;
 }
 
+.projects-more-toggle {
+  margin: 0 0 8px;
+}
+
+.projects-more[hidden] {
+  display: none !important;
+}
+
 .publication-view[hidden],
 .award-year-view[hidden] {
   display: none !important;

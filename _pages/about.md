@@ -39,6 +39,7 @@ redirect_from:
     <ul class="news-list">
       <li><span class="news-date"><em>2026.09</em></span> <a href="https://commonstackai.github.io/TwinRouterBench/" target="_blank" rel="noreferrer">TwinRouterBench</a> accepted to <strong>NeurIPS 2026</strong> Datasets &amp; Benchmarks Track.</li>
       <li><span class="news-date"><em>2026.09</em></span> <a href="https://robolineage.github.io/" target="_blank" rel="noreferrer">RoboLineage</a> accepted to <strong>CoRL 2026</strong>. Congratulations to all co-authors!</li>
+      <li><span class="news-date"><em>2026.09</em></span> Started my <strong>Ph.D.</strong> at <a href="https://www.cds.hku.hk/" target="_blank" rel="noreferrer">The University of Hong Kong</a>, advised by <a href="https://yanchaoyang.github.io/" target="_blank" rel="noreferrer">Yanchao Yang</a>.</li>
       <li><span class="news-date"><em>2026.06</em></span> Won <strong>Best Innovation Solution</strong> at the <a href="https://wbcdcompetition.github.io/#Winners" target="_blank" rel="noreferrer">2nd WBCD Competition @ ICRA 2026</a> with mu0.</li>
       <li><span class="news-date"><em>2026.02</em></span> Won <strong>Bronze Award</strong> at Deep Hackathon 2025.</li>
       <li><span class="news-date"><em>2025.10</em></span> Won <strong>Best Demo Award</strong> at the <a href="https://cim-workshop.github.io/" target="_blank" rel="noreferrer">IROS 2025 Workshop CIM</a> with SCAL.</li>
@@ -214,7 +215,7 @@ redirect_from:
       </div>
       <div class="education-info">
         <strong>The University of Hong Kong</strong><br>
-        <em>2026.9 - Present</em><br>
+        <em>2026.09 - Present</em><br>
         Ph.D. student in Embodied AI, <a href="https://www.cds.hku.hk/" target="_blank" rel="noreferrer">School of Computing and Data Science (CDS)</a>, advised by <a href="https://yanchaoyang.github.io/" target="_blank" rel="noreferrer">Yanchao Yang</a>.
       </div>
     </div>
@@ -225,7 +226,7 @@ redirect_from:
       </div>
       <div class="education-info">
         <strong>Transcengram</strong><br>
-        <em>2025.10 - 2026.9</em><br>
+        <em>2025.10 - 2026.09</em><br>
         Algorithm Intern in <a href="https://transcengram.com/" target="_blank" rel="noreferrer">Transcengram</a>, Shenzhen Algorithm Department. Research on teleoperation and data collection, which led to <a href="https://robolineage.github.io/" target="_blank" rel="noreferrer">RoboLineage</a> (CoRL 2026).
       </div>
     </div>
@@ -237,8 +238,8 @@ redirect_from:
       </div>
       <div class="education-info">
         <strong>X-Institute (X-Scholar)</strong><br>
-        <em>2024.10 - 2026.8</em><br>
-        Tsinghua University Tsien Excellence in Engineering Program (Joint Training), advised by <a href="https://scholar.google.com/citations?hl=zh-CN&amp;user=n-3doEMAAAAJ" target="_blank" rel="noreferrer">Wenzeng Zhang</a>. Research on underactuated hands and embodied AI policies
+        <em>2024.10 - 2026.08</em><br>
+        Tsinghua University Tsien Excellence in Engineering Program (Joint Training), advised by <a href="https://scholar.google.com/citations?hl=zh-CN&amp;user=n-3doEMAAAAJ" target="_blank" rel="noreferrer">Wenzeng Zhang</a>. Research on underactuated hands and embodied AI policies.
       </div>
     </div>
 
@@ -248,7 +249,7 @@ redirect_from:
       </div>
       <div class="education-info">
         <strong>Beijing Institute of Technology</strong><br>
-        <em>2022.8 - 2026.6</em><br>
+        <em>2022.08 - 2026.06</em><br>
         School of Computer Science · Xu Teli Honors Program (B.Eng.). Dewin Scholarship.
       </div>
     </div>
@@ -339,6 +340,8 @@ redirect_from:
     </div>
   </div>
 
+  <!-- The four projects above are always shown; older ones go in this folded group. -->
+  <div id="projects-more" class="projects-more" hidden>
   <div class="project-card">
     <div class="homepage-card-body">
       <div class="pub-media-rotator homepage-media" data-interval="4000">
@@ -352,7 +355,7 @@ redirect_from:
           <a href="https://mp.weixin.qq.com/s/7oM3LOVDVTd2uuUYfdLXgg" target="_blank" rel="noreferrer">BIT Official WeChat Report</a>
         </div>
         <p>
-          For distribution grids under extreme weather, we integrate strong AI with digital twins: time-series models and local knowledge base for early warnings, vulnerability assessment, and damage location prediction; an industry LLM connects multimodal monitoring with operations research for proactive monitor-alert-dispatch-recovery; a digital-twin platform provides panoramic visualization and strategy simulation.
+          Early warning and recovery for distribution grids under extreme weather: time-series models and a local knowledge base predict vulnerabilities and damage locations, an industry LLM links monitoring to dispatch, and a digital twin supports visualization and strategy simulation.
         </p>
       </div>
     </div>
@@ -376,8 +379,9 @@ redirect_from:
       </div>
     </div>
   </div>
+  </div>
 
-
+  <button class="pub-button projects-more-toggle" type="button" aria-expanded="false" aria-controls="projects-more">Show more projects</button>
 </section>
 
 <section id="awards">
@@ -460,9 +464,33 @@ function filterAwards(event, year) {
   });
 }
 
+function initProjectsToggle() {
+  const more = document.getElementById('projects-more');
+  const toggle = document.querySelector('.projects-more-toggle');
+  if (!more || !toggle) return;
+
+  const count = more.querySelectorAll('.project-card').length;
+  if (count === 0) {
+    toggle.hidden = true;
+    return;
+  }
+  const showLabel = `Show ${count} more project${count === 1 ? '' : 's'}`;
+  toggle.textContent = showLabel;
+
+  toggle.addEventListener('click', () => {
+    const opening = more.hidden;
+    more.hidden = !opening;
+    toggle.setAttribute('aria-expanded', String(opening));
+    toggle.textContent = opening ? 'Show fewer projects' : showLabel;
+    // Collapsing from far below would leave the reader past the section.
+    if (!opening) toggle.scrollIntoView({ block: 'nearest' });
+  });
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   filterPublications(null, 'core');
   filterAwards(null, 'full');
+  initProjectsToggle();
 });
 </script>
 <script src="assets/js/pub_media_rotator.js"></script>
