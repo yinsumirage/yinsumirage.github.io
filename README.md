@@ -63,5 +63,11 @@ reference (images, code, math, tables) that is never published; preview drafts w
 `bundle exec jekyll serve --drafts`. The **Blog** link in the top nav appears
 automatically once `_posts/` has at least one post.
 
+Production builds compress every page onto a single line (`compress_html` in
+`_config.yml`; `jekyll serve` skips it in development). Inline `<script>` blocks must
+therefore use `/* */` comments only: a `//` comment swallows the rest of the script.
+Check interactive changes against a production build, e.g.
+`JEKYLL_ENV=production bundle exec jekyll build`, not only `jekyll serve`.
+
 On Ruby 4 the pinned Liquid needs the local shim preloaded:
 `RUBYOPT="-r./_plugins/ruby4_compat.rb" bundle exec jekyll serve`.

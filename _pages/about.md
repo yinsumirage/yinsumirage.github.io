@@ -482,7 +482,7 @@ function initProjectsToggle() {
     more.hidden = !opening;
     toggle.setAttribute('aria-expanded', String(opening));
     toggle.textContent = opening ? 'Show fewer projects' : showLabel;
-    // Collapsing from far below would leave the reader past the section.
+    /* Collapsing from far below would leave the reader past the section. */
     if (!opening) toggle.scrollIntoView({ block: 'nearest' });
   });
 }
