@@ -75,6 +75,27 @@ redirect_from:
     <div class="publication-card">
       <div class="homepage-card-body">
         <div class="pub-media-rotator homepage-media" data-interval="4000">
+          <img src="assets/papers/26_ropetrack/image/overview-card.webp" loading="lazy" decoding="async" alt="RopeTrack overview: wearable string sensing, reuse of visual context, and robot teleoperation">
+        </div>
+        <div>
+          <strong>RopeTrack: Hand Pose Estimation with Low-Cost String Sensing and Sparse Visual Updates</strong><br>
+          <i><strong>Wentao Guo</strong>, Qian Luo, Yu Zhang, Yanchao Yang<sup>†</sup>.</i><br>
+          <p>
+            A low-cost wrist-mounted five-string interface that updates finger articulation between sparse visual reconstructions, for hand pose estimation and robot teleoperation.
+          </p>
+          <div class="pub-badge-row">
+            <span class="pub-list-badge">Under Review</span>
+          </div>
+          <div class="link-row compact">
+            <a class="homepage-link" href="assets/papers/26_ropetrack/ropetrack_overview.mp4" target="_blank" rel="noreferrer">Video</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="publication-card">
+      <div class="homepage-card-body">
+        <div class="pub-media-rotator homepage-media" data-interval="4000">
           <img src="assets/papers/26_robolineage/image/fig2-card.webp" loading="lazy" decoding="async" alt="RoboLineage lifecycle overview">
         </div>
         <div>
@@ -172,6 +193,12 @@ redirect_from:
   <div id="full-publications" class="publication-view" data-publication-view="list" hidden>
     <ul class="full-publication-list">
       <li>
+        <span class="pub-list-badge">Under Review</span>
+        <span class="pub-list-title">RopeTrack: Hand Pose Estimation with Low-Cost String Sensing and Sparse Visual Updates</span><br>
+        <span class="pub-list-authors"><strong>Wentao Guo</strong>, Qian Luo, Yu Zhang, Yanchao Yang<sup>†</sup>.</span>
+        <span class="pub-list-links"><a href="assets/papers/26_ropetrack/ropetrack_overview.mp4">[video]</a></span>
+      </li>
+      <li>
         <span class="pub-list-badge">CoRL 2026</span>
         <span class="pub-list-title">RoboLineage: Agent-Native Data Lifecycle Governance Across Robot Policy Iterations</span><br>
         <span class="pub-list-authors">Qian Luo, <strong>Wentao Guo</strong>, Zhennan Qin, Nanchun Guo, Yunhan Zhao, Yi Ma, Yanchao Yang<sup>†</sup>.</span>
@@ -227,7 +254,7 @@ redirect_from:
       <div class="education-info">
         <strong>Transcengram</strong><br>
         <em>2025.10 - 2026.09</em><br>
-        Algorithm Intern in <a href="https://transcengram.com/" target="_blank" rel="noreferrer">Transcengram</a>, Shenzhen Algorithm Department. Research on teleoperation and data collection, which led to <a href="https://robolineage.github.io/" target="_blank" rel="noreferrer">RoboLineage</a> (CoRL 2026).
+        Algorithm Intern in <a href="https://transcengram.com/" target="_blank" rel="noreferrer">Transcengram</a>, Shenzhen Algorithm Department. Research on teleoperation and data collection, which led to <a href="https://robolineage.github.io/" target="_blank" rel="noreferrer">RoboLineage</a> (CoRL 2026) and RopeTrack (under review).
       </div>
     </div>
 
