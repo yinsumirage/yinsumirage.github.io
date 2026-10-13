@@ -845,6 +845,13 @@ a:hover {
     justify-content: flex-start;
   }
 
+  /* Stacked cards: the date always goes on its own line under the name,
+     instead of beside short names and under long ones. */
+  .education-head {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
   .homepage-card-body > :last-child {
     align-self: auto;
   }
