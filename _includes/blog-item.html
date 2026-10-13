@@ -2,7 +2,12 @@
 {% assign post = include.post %}
 {% assign date_format = include.date_format | default: "%b %-d" %}
 {% include post-translation.html post=post %}
-<li class="blog-item" data-tags="|{{ post.tags | join: '|' | xml_escape }}|">
+{% assign thumb = post.cover_thumb | default: post.cover %}
+<li class="blog-item{% if thumb %} has-thumb{% endif %}" data-tags="|{{ post.tags | join: '|' | xml_escape }}|">
+  {% comment %}First in the markup so it can float beside the date and title on phones.{% endcomment %}
+  {% if thumb %}
+    <a class="blog-item-thumb" href="{{ base_path }}{{ post.url }}" tabindex="-1" aria-hidden="true"><img src="{{ base_path }}{{ thumb }}" alt="" width="480" height="270" loading="lazy" decoding="async"></a>
+  {% endif %}
   <time class="blog-item-date" datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: date_format }}</time>
   <div class="blog-item-body">
     <a class="blog-item-title" href="{{ base_path }}{{ post.url }}">{{ post.title }}</a>

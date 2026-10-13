@@ -105,10 +105,41 @@
   margin-right: 4px;
 }
 
+/* Posts with a `cover` get a small thumbnail on the right. */
+.blog-item.has-thumb {
+  grid-template-columns: 64px minmax(0, 1fr) 150px;
+}
+
+.blog-item.has-thumb .blog-item-date { grid-column: 1; grid-row: 1; }
+.blog-item.has-thumb .blog-item-body { grid-column: 2; grid-row: 1; }
+
+.blog-item-thumb {
+  display: block;
+  grid-column: 3;
+  grid-row: 1;
+  align-self: start;
+  margin-top: 3px;
+}
+
+.blog-item-thumb img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  border: 1px solid #ece9f7;
+  border-radius: 6px;
+  background: #fff;
+}
+
 /* ---------- Homepage "Blog" section ---------- */
 
 .blog-home .blog-item {
   grid-template-columns: 92px minmax(0, 1fr);
+}
+
+.blog-home .blog-item.has-thumb {
+  grid-template-columns: 92px minmax(0, 1fr) 150px;
 }
 
 .blog-home .blog-item-date {
@@ -241,6 +272,24 @@ a.post-lang:hover {
   display: flex;
   flex-wrap: wrap;
   gap: 6px;
+}
+
+/* Cover image under the title block, cropped to 2:1. */
+.post-cover {
+  display: block;
+  margin: -6px 0 30px;
+}
+
+.post-cover img {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0;
+  aspect-ratio: 2 / 1;
+  object-fit: cover;
+  border: 1px solid #ece9f7;
+  border-radius: 10px;
+  background: #fff;
 }
 
 .post-content {
@@ -549,8 +598,54 @@ a.post-lang:hover {
     gap: 2px;
   }
 
+  /* Phones: thumbnail on the left with the date and title beside it; the
+     summary and tags run full width below. The homepage cuts the summary to
+     two lines so its entries are no taller than without a thumbnail. */
+  .blog-item.has-thumb,
+  .blog-home .blog-item.has-thumb {
+    grid-template-columns: 120px minmax(0, 1fr);
+    grid-template-areas:
+      "thumb   date"
+      "thumb   title"
+      "summary summary"
+      "meta    meta";
+    column-gap: 14px;
+    row-gap: 2px;
+    align-items: start;
+  }
+
+  .blog-item.has-thumb .blog-item-body {
+    display: contents;
+  }
+
+  .blog-item.has-thumb .blog-item-thumb {
+    grid-area: thumb;
+    margin-top: 2px;
+  }
+
+  .blog-item.has-thumb .blog-item-date { grid-area: date; }
+  .blog-item.has-thumb .blog-item-title { grid-area: title; }
+  .blog-item.has-thumb .blog-item-meta { grid-area: meta; }
+
+  .page__content .blog-item.has-thumb .blog-item-summary {
+    grid-area: summary;
+    margin-top: 8px;
+  }
+
+  .page__content .blog-home .blog-item.has-thumb .blog-item-summary {
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+  }
+
   .post-title {
     font-size: 1.6em;
+  }
+
+  .post-cover {
+    margin-bottom: 22px;
   }
 
   .post-content {

@@ -2,6 +2,8 @@
 title: "Haptic Feedback in Teleoperation: Survey Notes"
 description: "Survey notes on haptic feedback for teleoperation: how humans perceive touch; vibration, force, electrical stimulation, and fluidic arrays; teleoperation systems such as DOGlove; and UMI-style wearable data collection such as DexUMI and DEXOP."
 tags: [robotics, haptics, teleoperation]
+cover: /assets/blog/haptic-teleoperation/cover.webp
+cover_thumb: /assets/blog/haptic-teleoperation/cover-thumb.webp
 ---
 
 This survey examines haptic feedback for teleoperation. I carried it out during my internship at Transcengram.

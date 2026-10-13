@@ -58,6 +58,26 @@ Posts with at least three `##`/`###` sections get a table of contents in the lef
 column in place of the author profile (a collapsible box on phones), and the byline
 names the author. Set `toc: false` in the front matter to turn it off.
 
+An optional cover image goes in the English post's front matter (the Chinese version
+uses the same one). Post lists show `cover_thumb` as a small thumbnail (it falls back
+to `cover`): on the right on wide screens, on the left on phones, where the homepage
+also cuts the summary to two lines. The post page shows `cover` under the title,
+cropped to 2:1, so keep the subject in the middle:
+
+```yaml
+cover: /assets/blog/<slug>/cover.webp
+cover_thumb: /assets/blog/<slug>/cover-thumb.webp
+```
+
+The existing covers are flat, white-background schematics with the site's violet
+accent and no text, generated with Codex image generation from a summary of the
+post. Make both sizes from the 16:9 original:
+
+```bash
+ffmpeg -i cover.png -vf "scale=1600:-2" -c:v libwebp -quality 88 assets/blog/<slug>/cover.webp
+ffmpeg -i cover.png -vf "scale=480:-2" -c:v libwebp -quality 88 assets/blog/<slug>/cover-thumb.webp
+```
+
 Put images in `assets/blog/<slug>/`. `_drafts/writing-guide.md` is a formatting
 reference (images, code, math, tables) that is never published; preview drafts with
 `bundle exec jekyll serve --drafts`. The **Blog** link in the top nav appears
