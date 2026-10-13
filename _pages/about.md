@@ -138,7 +138,7 @@ redirect_from:
             <a class="homepage-link" href="assets/papers/26_icra/icra2026.pdf" target="_blank" rel="noreferrer">PDF</a>
             <a class="homepage-link" href="https://arxiv.org/abs/2510.22738" target="_blank" rel="noreferrer">arXiv</a>
             <a class="homepage-link" href="assets/papers/26_icra/tl_hand_final.mp4" target="_blank" rel="noreferrer">Video</a>
-            <a class="homepage-link" href="assets/papers/26_icra/poster.jpg?view=poster" target="_blank" rel="noreferrer">Poster</a>
+            <a class="homepage-link" href="assets/papers/26_icra/poster.webp" target="_blank" rel="noreferrer">Poster</a>
           </div>
         </div>
       </div>
@@ -161,7 +161,7 @@ redirect_from:
           <div class="link-row compact">
             <a class="homepage-link" href="assets/papers/25_robio/25_robio_hoeckend.pdf" target="_blank" rel="noreferrer">PDF</a>
             <a class="homepage-link" href="https://arxiv.org/abs/2510.13553" target="_blank" rel="noreferrer">arXiv</a>
-            <a class="homepage-link" href="assets/papers/25_robio/poster.jpg?view=poster" target="_blank" rel="noreferrer">Poster</a>
+            <a class="homepage-link" href="assets/papers/25_robio/poster.webp" target="_blank" rel="noreferrer">Poster</a>
           </div>
         </div>
       </div>
@@ -185,7 +185,7 @@ redirect_from:
             <a class="homepage-link" href="assets/papers/25_iros/201866-3909.pdf" target="_blank" rel="noreferrer">PDF</a>
             <a class="homepage-link" href="https://arxiv.org/abs/2510.13535" target="_blank" rel="noreferrer">arXiv</a>
             <a class="homepage-link" href="https://www.youtube.com/watch?v=eQuu3pJjB0U" target="_blank" rel="noreferrer">Video</a>
-            <a class="homepage-link" href="assets/papers/25_iros/poster.jpg?view=poster" target="_blank" rel="noreferrer">Poster</a>
+            <a class="homepage-link" href="assets/papers/25_iros/poster.webp" target="_blank" rel="noreferrer">Poster</a>
           </div>
         </div>
       </div>
@@ -196,40 +196,40 @@ redirect_from:
     <ul class="full-publication-list">
       <li>
         <span class="pub-list-badge">Under Review</span>
-        <a class="pub-list-title" href="assets/papers/26_ropetrack/ropetrack_overview.mp4">RopeTrack: Hand Pose Estimation with Low-Cost String Sensing and Sparse Visual Updates</a><br>
+        <a class="pub-list-title" href="assets/papers/26_ropetrack/ropetrack_overview.mp4" target="_blank" rel="noreferrer">RopeTrack: Hand Pose Estimation with Low-Cost String Sensing and Sparse Visual Updates</a><br>
         <span class="pub-list-authors"><strong>Wentao Guo</strong>, Qian Luo, Yu Zhang, Yanchao Yang<sup>†</sup>.</span>
-        <span class="pub-list-links"><a href="assets/papers/26_ropetrack/ropetrack_overview.mp4">[video]</a></span>
+        <span class="pub-list-links"><a href="assets/papers/26_ropetrack/ropetrack_overview.mp4" target="_blank" rel="noreferrer">[video]</a></span>
       </li>
       <li>
         <span class="pub-list-badge">CoRL 2026</span>
-        <a class="pub-list-title" href="https://robolineage.github.io/">RoboLineage: Agent-Native Data Lifecycle Governance Across Robot Policy Iterations</a><br>
+        <a class="pub-list-title" href="https://robolineage.github.io/" target="_blank" rel="noreferrer">RoboLineage: Agent-Native Data Lifecycle Governance Across Robot Policy Iterations</a><br>
         <span class="pub-list-authors">Qian Luo, <strong>Wentao Guo</strong>, Zhennan Qin, Nanchun Guo, Yunhan Zhao, Yi Ma, Yanchao Yang<sup>†</sup>.</span>
-        <span class="pub-list-links"><a href="https://arxiv.org/abs/2606.22142">[arXiv]</a><a href="https://robolineage.github.io/">[page]</a><a href="https://github.com/robolineage/robolineage">[code]</a><a href="https://robolineage.github.io/#videos">[video]</a></span>
+        <span class="pub-list-links"><a href="https://arxiv.org/abs/2606.22142" target="_blank" rel="noreferrer">[arXiv]</a><a href="https://robolineage.github.io/" target="_blank" rel="noreferrer">[page]</a><a href="https://github.com/robolineage/robolineage" target="_blank" rel="noreferrer">[code]</a><a href="https://robolineage.github.io/#videos" target="_blank" rel="noreferrer">[video]</a></span>
       </li>
       <li>
         <span class="pub-list-badge">NeurIPS 2026 D&amp;B Track</span>
-        <a class="pub-list-title" href="https://commonstackai.github.io/TwinRouterBench/">TwinRouterBench: Fast Static and Live Dynamic Evaluation for Realistic Agentic LLM Routing</a><br>
+        <a class="pub-list-title" href="https://commonstackai.github.io/TwinRouterBench/" target="_blank" rel="noreferrer">TwinRouterBench: Fast Static and Live Dynamic Evaluation for Realistic Agentic LLM Routing</a><br>
         <span class="pub-list-authors">Pei Yang*, Wanyi Chen*, Tongyun Yang, Pengbin Feng, Jiarong Xing, <strong>Wentao Guo</strong>, Yuhang Yao, Yuhang Han, Hanchen Li, Xu Wang, Zeyu Wang, Jie Xiao, Anjie Yang, Liang Tian, Lynn Ai, Eric Yang, Tianyu Shi<sup>†</sup>.</span>
-        <span class="pub-list-links"><a href="https://arxiv.org/abs/2605.18859">[arXiv]</a><a href="https://commonstackai.github.io/TwinRouterBench/">[page]</a><a href="https://github.com/CommonstackAI/TwinRouterBench">[code]</a></span>
+        <span class="pub-list-links"><a href="https://arxiv.org/abs/2605.18859" target="_blank" rel="noreferrer">[arXiv]</a><a href="https://commonstackai.github.io/TwinRouterBench/" target="_blank" rel="noreferrer">[page]</a><a href="https://github.com/CommonstackAI/TwinRouterBench" target="_blank" rel="noreferrer">[code]</a></span>
       </li>
       <li>
         <span class="pub-list-badge">Preprint</span>
         <span class="pub-list-badge">IROS Workshop CIM Best Demo Award</span>
-        <a class="pub-list-title" href="https://arxiv.org/abs/2510.22738">SCAL for Pinch-Lifting: Complementary Rotational and Linear Prototypes for Environment-Adaptive Grasping</a><br>
+        <a class="pub-list-title" href="https://arxiv.org/abs/2510.22738" target="_blank" rel="noreferrer">SCAL for Pinch-Lifting: Complementary Rotational and Linear Prototypes for Environment-Adaptive Grasping</a><br>
         <span class="pub-list-authors"><strong>Wentao Guo</strong>, Wenzeng Zhang<sup>†</sup>.</span>
-        <span class="pub-list-links"><a href="assets/papers/26_icra/icra2026.pdf">[PDF]</a><a href="https://arxiv.org/abs/2510.22738">[arXiv]</a><a href="assets/papers/26_icra/tl_hand_final.mp4">[video]</a><a href="assets/papers/26_icra/poster.jpg?view=poster">[poster]</a></span>
+        <span class="pub-list-links"><a href="assets/papers/26_icra/icra2026.pdf" target="_blank" rel="noreferrer">[PDF]</a><a href="https://arxiv.org/abs/2510.22738" target="_blank" rel="noreferrer">[arXiv]</a><a href="assets/papers/26_icra/tl_hand_final.mp4" target="_blank" rel="noreferrer">[video]</a><a href="assets/papers/26_icra/poster.webp" target="_blank" rel="noreferrer">[poster]</a></span>
       </li>
       <li>
         <span class="pub-list-badge">ROBIO 2025 Oral</span>
-        <a class="pub-list-title" href="https://arxiv.org/abs/2510.13553">Hoecken-D Hand: A Novel Robotic Hand for Linear Parallel Pinching and Self-Adaptive Grasping</a><br>
+        <a class="pub-list-title" href="https://arxiv.org/abs/2510.13553" target="_blank" rel="noreferrer">Hoecken-D Hand: A Novel Robotic Hand for Linear Parallel Pinching and Self-Adaptive Grasping</a><br>
         <span class="pub-list-authors"><strong>Wentao Guo</strong>, Wenzeng Zhang<sup>†</sup>.</span>
-        <span class="pub-list-links"><a href="assets/papers/25_robio/25_robio_hoeckend.pdf">[PDF]</a><a href="https://arxiv.org/abs/2510.13553">[arXiv]</a><a href="assets/papers/25_robio/poster.jpg?view=poster">[poster]</a></span>
+        <span class="pub-list-links"><a href="assets/papers/25_robio/25_robio_hoeckend.pdf" target="_blank" rel="noreferrer">[PDF]</a><a href="https://arxiv.org/abs/2510.13553" target="_blank" rel="noreferrer">[arXiv]</a><a href="assets/papers/25_robio/poster.webp" target="_blank" rel="noreferrer">[poster]</a></span>
       </li>
       <li>
         <span class="pub-list-badge">IROS 2025 Oral</span>
-        <a class="pub-list-title" href="https://arxiv.org/abs/2510.13535">A Novel Robot Hand with Hoeckens Linkages and Soft Phalanges for Scooping and Self-Adaptive Grasping in Environmental Constraints</a><br>
+        <a class="pub-list-title" href="https://arxiv.org/abs/2510.13535" target="_blank" rel="noreferrer">A Novel Robot Hand with Hoeckens Linkages and Soft Phalanges for Scooping and Self-Adaptive Grasping in Environmental Constraints</a><br>
         <span class="pub-list-authors"><strong>Wentao Guo</strong>, Yizhou Wang, Wenzeng Zhang<sup>†</sup>.</span>
-        <span class="pub-list-links"><a href="assets/papers/25_iros/201866-3909.pdf">[PDF]</a><a href="https://arxiv.org/abs/2510.13535">[arXiv]</a><a href="https://www.youtube.com/watch?v=eQuu3pJjB0U">[video]</a><a href="assets/papers/25_iros/poster.jpg?view=poster">[poster]</a></span>
+        <span class="pub-list-links"><a href="assets/papers/25_iros/201866-3909.pdf" target="_blank" rel="noreferrer">[PDF]</a><a href="https://arxiv.org/abs/2510.13535" target="_blank" rel="noreferrer">[arXiv]</a><a href="https://www.youtube.com/watch?v=eQuu3pJjB0U" target="_blank" rel="noreferrer">[video]</a><a href="assets/papers/25_iros/poster.webp" target="_blank" rel="noreferrer">[poster]</a></span>
       </li>
     </ul>
   </div>
