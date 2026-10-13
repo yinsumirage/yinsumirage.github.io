@@ -59,9 +59,10 @@ column in place of the author profile (a collapsible box on phones), and the byl
 names the author. Set `toc: false` in the front matter to turn it off.
 
 An optional cover image goes in the English post's front matter (the Chinese version
-uses the same one). Post lists show `cover_thumb` as a small thumbnail on the right
-(it falls back to `cover`), and the post page shows `cover` under the title, cropped
-to 2:1, so keep the subject in the middle:
+uses the same one). Post lists show `cover_thumb` as a small thumbnail (it falls back
+to `cover`): on the right on wide screens, on the left on phones, where the homepage
+also cuts the summary to two lines. The post page shows `cover` under the title,
+cropped to 2:1, so keep the subject in the middle:
 
 ```yaml
 cover: /assets/blog/<slug>/cover.webp

@@ -598,23 +598,46 @@ a.post-lang:hover {
     gap: 2px;
   }
 
-  /* Phones: the thumbnail floats beside the date and the first title line
-     only (it is no taller than those two lines), so the rest of the entry
-     keeps the full width and the entry does not grow. */
+  /* Phones: thumbnail on the left with the date and title beside it; the
+     summary and tags run full width below. The homepage cuts the summary to
+     two lines so its entries are no taller than without a thumbnail. */
   .blog-item.has-thumb,
   .blog-home .blog-item.has-thumb {
-    display: flow-root;
+    grid-template-columns: 120px minmax(0, 1fr);
+    grid-template-areas:
+      "thumb   date"
+      "thumb   title"
+      "summary summary"
+      "meta    meta";
+    column-gap: 14px;
+    row-gap: 2px;
+    align-items: start;
   }
 
-  .blog-item.has-thumb .blog-item-date {
-    display: block;
-    margin-bottom: 2px;
+  .blog-item.has-thumb .blog-item-body {
+    display: contents;
   }
 
   .blog-item.has-thumb .blog-item-thumb {
-    float: right;
-    width: 70px;
-    margin: 0 0 0 12px;
+    grid-area: thumb;
+    margin-top: 2px;
+  }
+
+  .blog-item.has-thumb .blog-item-date { grid-area: date; }
+  .blog-item.has-thumb .blog-item-title { grid-area: title; }
+  .blog-item.has-thumb .blog-item-meta { grid-area: meta; }
+
+  .page__content .blog-item.has-thumb .blog-item-summary {
+    grid-area: summary;
+    margin-top: 8px;
+  }
+
+  .page__content .blog-home .blog-item.has-thumb .blog-item-summary {
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
   }
 
   .post-title {
