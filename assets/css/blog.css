@@ -30,6 +30,7 @@
 
 .blog-tag-filter {
   margin: 14px 0 6px;
+  scroll-margin-top: calc(var(--masthead-offset, 80px) + 4px);
 }
 
 .blog-tag-filter .pub-button {

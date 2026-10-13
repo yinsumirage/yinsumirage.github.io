@@ -200,13 +200,13 @@ h3,
 .education-container {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 10px;
 }
 
 .education-card {
   display: flex;
   align-items: center;
-  padding: 16px;
+  padding: 10px 14px;
   margin-bottom: 0;
   border-radius: 12px;
   background: #f9f9f9;
@@ -221,26 +221,40 @@ h3,
   box-shadow: 0 8px 16px rgba(0,0,0,0.1);
 }
 
+/* Logos are capped at 44px tall so each entry stays about two text lines high;
+   a pair (X-Institute + Tsinghua) sits side by side. */
 .education-logos {
-  width: 80px;
-  margin-right: 20px;
+  width: 96px;
+  margin-right: 16px;
   flex: 0 0 auto;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  gap: 8px;
+  justify-content: center;
+  gap: 6px;
 }
 
 .education-logos img {
-  width: 60px;
-  height: 60px;
+  width: auto;
+  height: auto;
+  max-width: 96px;
+  max-height: 44px;
   border-radius: 8px;
   object-fit: contain;
 }
 
-.education-logos .education-logo-wide {
-  width: 86px;
-  height: auto;
+.education-logos img[src$=".svg"] {
+  width: 44px;
+  height: 44px;
+}
+
+.education-logos img:first-child:not(:only-child) {
+  max-width: 54px;
+}
+
+.education-logos img:first-child + img {
+  width: 34px;
+  height: 34px;
+  flex: none;
 }
 
 .education-logo-text {
@@ -256,12 +270,28 @@ h3,
 }
 
 .education-info {
-  line-height: 1.55;
+  flex: 1;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+.education-head {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: baseline;
+  column-gap: 12px;
 }
 
 .education-info strong {
   color: var(--heading);
-  font-size: 1.1em;
+  font-size: 1.05em;
+}
+
+.education-head em {
+  color: #9aa0a6;
+  font-size: 14px;
+  white-space: nowrap;
 }
 
 .education-info ul {
@@ -281,16 +311,22 @@ h3,
   color: #5f6368;
 }
 
+/* The figure box stretches to the card's height, so when narrow windows wrap the
+   text onto more lines, taller figures grow instead of floating in blank space. */
 .homepage-card-body {
   display: flex;
-  align-items: center;
+  align-items: stretch;
   gap: 20px;
+}
+
+.homepage-card-body > :last-child {
+  align-self: center;
 }
 
 .homepage-media {
   position: relative;
   width: 320px;
-  height: 180px;
+  min-height: 180px;
   overflow: hidden;
   flex: 0 0 320px;
   border-radius: 8px;
@@ -304,6 +340,73 @@ h3,
   object-fit: contain;
   display: block;
   margin: 0 auto;
+}
+
+/* Out of flow, so a tall figure can't make the card taller than its text. */
+.homepage-media > img,
+.homepage-media > video,
+.homepage-media > .media-zoom {
+  position: absolute;
+  inset: 0;
+}
+
+/* Card figures enlarge in a lightbox (see initMediaZoom in about.md). */
+.homepage-media .media-zoom {
+  display: block;
+  cursor: zoom-in;
+}
+
+.homepage-media .media-zoom img {
+  transition: transform 0.3s ease;
+}
+
+.homepage-media .media-zoom:hover img {
+  transform: scale(1.03);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .homepage-media .media-zoom:hover img {
+    transform: none;
+  }
+}
+
+/* Transparent figures sit on white in the lightbox, as they do on the card;
+   content-box keeps the popup's top and bottom padding dark. */
+.mfp-media-zoom img.mfp-img {
+  background: #fff;
+  background-clip: content-box;
+}
+
+.mfp-media-zoom.mfp-bg,
+.mfp-media-zoom.mfp-wrap .mfp-content {
+  opacity: 0;
+  transition: opacity 0.16s ease-out;
+}
+
+.mfp-media-zoom.mfp-bg.mfp-ready {
+  opacity: 0.8;
+}
+
+.mfp-media-zoom.mfp-wrap.mfp-ready .mfp-content {
+  opacity: 1;
+}
+
+.mfp-media-zoom.mfp-bg.mfp-removing,
+.mfp-media-zoom.mfp-wrap.mfp-removing .mfp-content {
+  opacity: 0;
+}
+
+/* Paper titles link to the paper's main page; they keep the title color
+   until hovered. */
+.publication-card .pub-title-link {
+  color: inherit;
+}
+
+.publication-card .pub-title-link:hover,
+.full-publication-list .pub-list-title:hover {
+  color: var(--accent-muted);
+  text-decoration: underline !important;
+  text-underline-offset: 3px;
 }
 
 .full-publication-list .pub-list-title {
@@ -348,26 +451,29 @@ h3,
   flex-wrap: wrap;
 }
 
+/* Buttons are white with a gray outline and fill solid purple when selected,
+   so they read differently from the tinted, non-clickable badges. */
 .pub-button {
   display: inline-block;
   background-color: #fff;
-  border: 1px solid #e4e1ff;
+  border: 1px solid #dadce0;
   border-radius: 20px;
   padding: 8px 16px;
   font-size: 15px;
-  color: var(--accent-muted);
+  color: var(--text);
   cursor: pointer;
   transition: all 0.3s ease;
 }
 
 .pub-button:hover {
-  background-color: var(--accent-soft);
+  border-color: var(--accent);
+  color: var(--accent-muted);
 }
 
 .pub-button.active {
-  background-color: var(--accent-soft);
-  color: var(--accent-muted);
-  border-color: var(--accent-border);
+  background-color: var(--accent-muted);
+  border-color: var(--accent-muted);
+  color: #fff;
 }
 
 .award-filter {
@@ -418,9 +524,7 @@ h3,
 }
 
 .pub-list-badge,
-.status-pill,
-.tag-row span,
-.award-level {
+.tag-row span {
   display: inline-block;
   margin-right: 6px;
   padding: 2px 8px;
@@ -436,8 +540,41 @@ h3,
   white-space: nowrap;
 }
 
+/* Secondary labels (project year, award level) are plain gray text so the
+   remaining badges stand out. */
+.status-pill,
+.award-level {
+  display: inline-block;
+  color: #9aa0a6;
+  font-size: 13px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
 .status-pill {
   margin-left: 6px;
+}
+
+.award-level::before {
+  content: "· ";
+}
+
+/* Awards in project cards: trophy instead of the [link] brackets. */
+.project-badges .project-award::before {
+  content: "\f091";
+  margin-right: 5px;
+  font-family: "Font Awesome 6 Free";
+  font-size: 0.9em;
+  font-weight: 900;
+}
+
+.project-badges .project-award::after {
+  content: none;
+}
+
+.project-badges a.project-award:hover {
+  text-decoration: underline !important;
+  text-underline-offset: 3px;
 }
 
 .project-badges,
@@ -508,6 +645,12 @@ a:hover {
 .author__urls-wrapper a:hover,
 .greedy-nav a:hover {
   text-decoration: none !important;
+}
+
+/* Click-to-copy WeChat ID: hovers like the sidebar links (the phone layout
+   below overrides both). */
+.author__copy:hover {
+  color: var(--accent-strong);
 }
 
 .site-title,
@@ -698,14 +841,17 @@ a:hover {
 
   .education-logos {
     width: auto;
-    margin-right: 0;
-    flex-direction: row;
+    margin: 0 0 6px;
     justify-content: flex-start;
+  }
+
+  .homepage-card-body > :last-child {
+    align-self: auto;
   }
 
   .homepage-media {
     width: 100%;
-    height: auto;
+    min-height: 0;
     aspect-ratio: 16 / 9;
     flex: none;
     margin-bottom: 12px;

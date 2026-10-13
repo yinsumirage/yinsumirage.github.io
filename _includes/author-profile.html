@@ -43,7 +43,7 @@
         {% if author.WeChat contains '://' %}
           <li class="author__wechat"><a href="{{ author.WeChat }}"><i class="fab fa-fw fa-weixin icon-pad-right" aria-hidden="true"></i>WeChat</a></li>
         {% else %}
-          <li class="author__wechat"><span><i class="fab fa-fw fa-weixin icon-pad-right" aria-hidden="true"></i>WeChat: {{ author.WeChat }}</span></li>
+          <li class="author__wechat"><span class="author__copy" role="button" tabindex="0" aria-live="polite" title="Copy WeChat ID" data-copy="{{ author.WeChat }}" data-copied="WeChat ID copied"><i class="fab fa-fw fa-weixin icon-pad-right" aria-hidden="true"></i>WeChat: {{ author.WeChat }}</span></li>
         {% endif %}
       {% endif %}
       

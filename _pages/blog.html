@@ -59,21 +59,40 @@ stylesheets:
       });
     }
 
+    function isKnown(tag) {
+      return Array.prototype.some.call(buttons, function(button) {
+        return button.getAttribute('data-tag') === tag;
+      });
+    }
+
+    function selectTag(tag) {
+      applyTag(tag);
+      var url = new URL(window.location.href);
+      if (tag) url.searchParams.set('tag', tag); else url.searchParams.delete('tag');
+      history.replaceState(null, '', url);
+    }
+
     buttons.forEach(function(button) {
       button.addEventListener('click', function() {
-        var tag = button.getAttribute('data-tag');
-        applyTag(tag);
-        var url = new URL(window.location.href);
-        if (tag) url.searchParams.set('tag', tag); else url.searchParams.delete('tag');
-        history.replaceState(null, '', url);
+        selectTag(button.getAttribute('data-tag'));
+      });
+    });
+
+    /* A post's own tag filters in place instead of reloading the page, and
+       brings the filter bar back into view if it was scrolled past. */
+    var filter = document.querySelector('.blog-tag-filter');
+    document.querySelectorAll('.blog-item a.post-tag').forEach(function(link) {
+      link.addEventListener('click', function(event) {
+        var tag = new URL(link.href).searchParams.get('tag');
+        if (!isKnown(tag)) return;
+        event.preventDefault();
+        selectTag(tag);
+        if (filter.getBoundingClientRect().top < 0) filter.scrollIntoView({ behavior: 'smooth' });
       });
     });
 
     var initial = new URLSearchParams(window.location.search).get('tag') || '';
-    var known = Array.prototype.some.call(buttons, function(button) {
-      return button.getAttribute('data-tag') === initial;
-    });
-    applyTag(known ? initial : '');
+    applyTag(isKnown(initial) ? initial : '');
   })();
   </script>
 {% endif %}

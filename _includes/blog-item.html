@@ -15,7 +15,7 @@
       {% elsif translation %}
         <a class="post-lang" href="{{ base_path }}{{ translation.url }}" hreflang="zh-CN" lang="zh-CN" title="Read in Chinese">中文</a>
       {% endif %}
-      {% for tag in post.tags %}<span class="post-tag">{{ tag }}</span>{% endfor %}
+      {% for tag in post.tags %}<a class="post-tag" href="{{ base_path }}/blog/?tag={{ tag | url_encode }}">{{ tag }}</a>{% endfor %}
     </div>
   </div>
 </li>
