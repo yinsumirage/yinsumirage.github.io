@@ -476,8 +476,52 @@ h3,
   color: #fff;
 }
 
-.award-filter {
-  margin-bottom: 12px;
+/* Section heading with its view switch right after the title; the heading's rule
+   moves to the row so it spans the switch too. */
+.section-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px 18px;
+  margin: 39px 0 10px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #f2f3f3;
+}
+
+.page__content .section-head h2 {
+  margin: 0;
+  padding: 0;
+  border-bottom: 0;
+}
+
+/* Small segmented switch, styled like the post page's English/中文 switch. */
+.seg-toggle {
+  display: inline-flex;
+  padding: 2px;
+  border: 1px solid var(--accent-border);
+  border-radius: 999px;
+  background: #fff;
+}
+
+.seg-toggle .pub-button {
+  padding: 3px 14px;
+  border: 0;
+  border-radius: 999px;
+  background: transparent;
+  color: var(--accent-muted);
+  font-size: 14.5px;
+  font-weight: 650;
+  line-height: 1.5;
+}
+
+.seg-toggle .pub-button:hover {
+  background: var(--accent-soft);
+  color: var(--accent-strong);
+}
+
+.seg-toggle .pub-button.active {
+  background: var(--accent);
+  color: #fff;
 }
 
 .projects-more-toggle {

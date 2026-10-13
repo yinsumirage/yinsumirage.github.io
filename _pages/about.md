@@ -64,12 +64,14 @@ redirect_from:
 {% endif %}
 
 <section id="publications">
-  <h2>Publications</h2>
-  <p class="author-note">* equal contribution · † corresponding author · ‡ project leader</p>
-  <div class="pub-button-container">
-    <button class="pub-button active" onclick="filterPublications(event, 'all')">Selected Publications</button>
-    <button class="pub-button" onclick="filterPublications(event, 'list')">Full Publications List</button>
+  <div class="section-head">
+    <h2>Publications</h2>
+    <div class="seg-toggle" role="group" aria-label="Publication view">
+      <button class="pub-button active" onclick="filterPublications(event, 'all')">Selected</button>
+      <button class="pub-button" onclick="filterPublications(event, 'list')">Full list</button>
+    </div>
   </div>
+  <p class="author-note">* equal contribution · † corresponding author · ‡ project leader</p>
 
   <div id="core-publications" class="publication-view" data-publication-view="core">
     <div class="publication-card">
@@ -408,12 +410,14 @@ redirect_from:
 </section>
 
 <section id="awards">
-  <h2>Awards & Honors</h2>
-  <div class="pub-button-container award-filter">
-    <button class="pub-button active" onclick="filterAwards(event, 'full')">Full</button>
-    <button class="pub-button" onclick="filterAwards(event, '2026')">2026</button>
-    <button class="pub-button" onclick="filterAwards(event, '2025')">2025</button>
-    <button class="pub-button" onclick="filterAwards(event, '2024')">2024</button>
+  <div class="section-head">
+    <h2>Awards & Honors</h2>
+    <div class="seg-toggle award-filter" role="group" aria-label="Filter awards by year">
+      <button class="pub-button active" onclick="filterAwards(event, 'full')">Full</button>
+      <button class="pub-button" onclick="filterAwards(event, '2026')">2026</button>
+      <button class="pub-button" onclick="filterAwards(event, '2025')">2025</button>
+      <button class="pub-button" onclick="filterAwards(event, '2024')">2024</button>
+    </div>
   </div>
 
   <div class="award-year-view" data-award-year="2026">
