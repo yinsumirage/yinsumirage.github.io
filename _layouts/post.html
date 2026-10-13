@@ -89,6 +89,14 @@ layout: default
         {% endif %}
       </header>
 
+      {% comment %}The Chinese version uses the English post's cover.{% endcomment %}
+      {% assign cover = page.cover | default: translation.cover %}
+      {% if cover %}
+        <figure class="post-cover">
+          <img src="{{ base_path }}{{ cover }}" alt="" width="1600" height="900" decoding="async" fetchpriority="high">
+        </figure>
+      {% endif %}
+
       {% if show_toc %}
         <details class="post-toc-inline" hidden>
           <summary>{{ ui.toc }}</summary>

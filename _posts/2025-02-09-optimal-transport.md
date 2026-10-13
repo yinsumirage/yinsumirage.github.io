@@ -2,6 +2,8 @@
 title: "Notes on Optimal Transport: From Monge to Sinkhorn"
 description: "Study notes that go from the Monge problem and the Kantorovich relaxation to entropic regularization and the Sinkhorn algorithm, with a quick look at OT in WGAN, missing-data imputation, and Neural OT."
 tags: [math, optimal-transport]
+cover: /assets/blog/optimal-transport/cover.webp
+cover_thumb: /assets/blog/optimal-transport/cover-thumb.webp
 ---
 
 These are the notes I put together while learning optimal transport (OT). They mainly follow Peyré & Cuturi's *Computational Optimal Transport* and Cuturi's 2013 Sinkhorn paper, which is also where most of the figures come from.

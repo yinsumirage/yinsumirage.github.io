@@ -105,10 +105,41 @@
   margin-right: 4px;
 }
 
+/* Posts with a `cover` get a small thumbnail on the right. */
+.blog-item.has-thumb {
+  grid-template-columns: 64px minmax(0, 1fr) 150px;
+}
+
+.blog-item.has-thumb .blog-item-date { grid-column: 1; grid-row: 1; }
+.blog-item.has-thumb .blog-item-body { grid-column: 2; grid-row: 1; }
+
+.blog-item-thumb {
+  display: block;
+  grid-column: 3;
+  grid-row: 1;
+  align-self: start;
+  margin-top: 3px;
+}
+
+.blog-item-thumb img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  border: 1px solid #ece9f7;
+  border-radius: 6px;
+  background: #fff;
+}
+
 /* ---------- Homepage "Blog" section ---------- */
 
 .blog-home .blog-item {
   grid-template-columns: 92px minmax(0, 1fr);
+}
+
+.blog-home .blog-item.has-thumb {
+  grid-template-columns: 92px minmax(0, 1fr) 150px;
 }
 
 .blog-home .blog-item-date {
@@ -241,6 +272,24 @@ a.post-lang:hover {
   display: flex;
   flex-wrap: wrap;
   gap: 6px;
+}
+
+/* Cover image under the title block, cropped to 2:1. */
+.post-cover {
+  display: block;
+  margin: -6px 0 30px;
+}
+
+.post-cover img {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0;
+  aspect-ratio: 2 / 1;
+  object-fit: cover;
+  border: 1px solid #ece9f7;
+  border-radius: 10px;
+  background: #fff;
 }
 
 .post-content {
@@ -549,8 +598,31 @@ a.post-lang:hover {
     gap: 2px;
   }
 
+  /* Phones: the thumbnail floats beside the date and the first title line
+     only (it is no taller than those two lines), so the rest of the entry
+     keeps the full width and the entry does not grow. */
+  .blog-item.has-thumb,
+  .blog-home .blog-item.has-thumb {
+    display: flow-root;
+  }
+
+  .blog-item.has-thumb .blog-item-date {
+    display: block;
+    margin-bottom: 2px;
+  }
+
+  .blog-item.has-thumb .blog-item-thumb {
+    float: right;
+    width: 70px;
+    margin: 0 0 0 12px;
+  }
+
   .post-title {
     font-size: 1.6em;
+  }
+
+  .post-cover {
+    margin-bottom: 22px;
   }
 
   .post-content {
