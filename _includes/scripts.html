@@ -27,6 +27,55 @@
     document.addEventListener('keydown', function(event) {
       if (event.key === 'Escape') closeAll();
     });
+
+    initCopy();
+  }
+
+  /* Sidebar entries with data-copy (the WeChat ID) copy it on click and
+     briefly show data-copied in place of their label. Block comments only:
+     production HTML is compressed onto one line. */
+  function initCopy() {
+    document.querySelectorAll('.author__copy[data-copy]').forEach(function(el) {
+      var label = el.lastChild;
+      var original = label.nodeValue;
+      var timer = null;
+
+      function done() {
+        label.nodeValue = el.getAttribute('data-copied') || 'Copied';
+        clearTimeout(timer);
+        timer = setTimeout(function() { label.nodeValue = original; }, 1600);
+      }
+
+      function fallback(text) {
+        var area = document.createElement('textarea');
+        area.value = text;
+        area.setAttribute('readonly', '');
+        area.style.position = 'fixed';
+        area.style.opacity = '0';
+        document.body.appendChild(area);
+        area.select();
+        var ok = false;
+        try { ok = document.execCommand('copy'); } catch (error) { ok = false; }
+        document.body.removeChild(area);
+        if (ok) done();
+      }
+
+      function copy() {
+        var text = el.getAttribute('data-copy');
+        if (navigator.clipboard && window.isSecureContext) {
+          navigator.clipboard.writeText(text).then(done, function() { fallback(text); });
+        } else {
+          fallback(text);
+        }
+      }
+
+      el.addEventListener('click', copy);
+      el.addEventListener('keydown', function(event) {
+        if (event.key !== 'Enter' && event.key !== ' ') return;
+        event.preventDefault();
+        copy();
+      });
+    });
   }
 
   if (document.readyState === 'loading') {

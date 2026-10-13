@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
   rotators.forEach((rotator) => {
     const intervalMs = Number.parseInt(rotator.dataset.interval || '4000', 10);
     let items = Array.from(rotator.children).filter(
-      (el) => el && (el.tagName === 'IMG' || el.tagName === 'VIDEO')
+      (el) => el && (el.tagName === 'IMG' || el.tagName === 'VIDEO' || el.tagName === 'A')
     );
 
     items = items.filter((el) => {

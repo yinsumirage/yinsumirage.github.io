@@ -75,10 +75,10 @@ redirect_from:
     <div class="publication-card">
       <div class="homepage-card-body">
         <div class="pub-media-rotator homepage-media" data-interval="4000">
-          <img src="assets/papers/26_ropetrack/image/overview-card.webp" loading="lazy" decoding="async" alt="RopeTrack overview: wearable string sensing, reuse of visual context, and robot teleoperation">
+          <a class="media-zoom" href="assets/papers/26_ropetrack/image/overview-full.webp"><img src="assets/papers/26_ropetrack/image/overview-card.webp" loading="lazy" decoding="async" alt="RopeTrack overview: wearable string sensing, reuse of visual context, and robot teleoperation"></a>
         </div>
         <div>
-          <strong>RopeTrack: Hand Pose Estimation with Low-Cost String Sensing and Sparse Visual Updates</strong><br>
+          <strong><a class="pub-title-link" href="assets/papers/26_ropetrack/ropetrack_overview.mp4" target="_blank" rel="noreferrer">RopeTrack: Hand Pose Estimation with Low-Cost String Sensing and Sparse Visual Updates</a></strong><br>
           <i><strong>Wentao Guo</strong>, Qian Luo, Yu Zhang, Yanchao Yang<sup>†</sup>.</i><br>
           <p>
             A low-cost wrist-mounted five-string interface that updates finger articulation between sparse visual reconstructions, for hand pose estimation and robot teleoperation.
@@ -96,10 +96,10 @@ redirect_from:
     <div class="publication-card">
       <div class="homepage-card-body">
         <div class="pub-media-rotator homepage-media" data-interval="4000">
-          <img src="assets/papers/26_robolineage/image/fig2-card.webp" loading="lazy" decoding="async" alt="RoboLineage lifecycle overview">
+          <a class="media-zoom" href="assets/papers/26_robolineage/image/fig2-full.webp"><img src="assets/papers/26_robolineage/image/fig2-card.webp" loading="lazy" decoding="async" alt="RoboLineage lifecycle overview"></a>
         </div>
         <div>
-          <strong>RoboLineage: Agent-Native Data Lifecycle Governance Across Robot Policy Iterations</strong><br>
+          <strong><a class="pub-title-link" href="https://robolineage.github.io/" target="_blank" rel="noreferrer">RoboLineage: Agent-Native Data Lifecycle Governance Across Robot Policy Iterations</a></strong><br>
           <i>Qian Luo, <strong>Wentao Guo</strong>, Zhennan Qin, Nanchun Guo, Yunhan Zhao, Yi Ma, Yanchao Yang<sup>†</sup>.</i><br>
           <p>
             Agent-native lifecycle governance for robot policy iteration across collection, review, training, evaluation, and recollection.
@@ -120,10 +120,10 @@ redirect_from:
     <div class="publication-card">
       <div class="homepage-card-body">
         <div class="pub-media-rotator homepage-media" data-interval="4000">
-          <img src="assets/papers/26_icra/image/照片-card.webp" loading="lazy" decoding="async" alt="SCAL prototype">
+          <a class="media-zoom" href="assets/papers/26_icra/image/照片-full.webp"><img src="assets/papers/26_icra/image/照片-card.webp" loading="lazy" decoding="async" alt="SCAL prototype"></a>
         </div>
         <div>
-          <strong>SCAL for Pinch-Lifting: Complementary Rotational and Linear Prototypes for Environment-Adaptive Grasping</strong><br>
+          <strong><a class="pub-title-link" href="https://arxiv.org/abs/2510.22738" target="_blank" rel="noreferrer">SCAL for Pinch-Lifting: Complementary Rotational and Linear Prototypes for Environment-Adaptive Grasping</a></strong><br>
           <i><strong>Wentao Guo</strong>, Wenzeng Zhang<sup>†</sup>.</i><br>
           <p>
             Complementary rotational and linear prototypes for environment-adaptive pinch-lifting and grasping.
@@ -145,10 +145,10 @@ redirect_from:
     <div class="publication-card">
       <div class="homepage-card-body">
         <div class="pub-media-rotator homepage-media" data-interval="4000">
-          <img src="assets/papers/25_robio/image/demo集合-card.webp" loading="lazy" decoding="async" alt="Hoecken-D hand demonstrations">
+          <a class="media-zoom" href="assets/papers/25_robio/image/demo集合-full.webp"><img src="assets/papers/25_robio/image/demo集合-card.webp" loading="lazy" decoding="async" alt="Hoecken-D hand demonstrations"></a>
         </div>
         <div>
-          <strong>Hoecken-D Hand: A Novel Robotic Hand for Linear Parallel Pinching and Self-Adaptive Grasping</strong><br>
+          <strong><a class="pub-title-link" href="https://arxiv.org/abs/2510.13553" target="_blank" rel="noreferrer">Hoecken-D Hand: A Novel Robotic Hand for Linear Parallel Pinching and Self-Adaptive Grasping</a></strong><br>
           <i><strong>Wentao Guo</strong>, Wenzeng Zhang<sup>†</sup>.</i><br>
           <p>
             A robotic hand for linear parallel pinching and self-adaptive grasping, designed around compact linkage-driven motion.
@@ -168,10 +168,10 @@ redirect_from:
     <div class="publication-card">
       <div class="homepage-card-body">
         <div class="pub-media-rotator homepage-media" data-interval="4000">
-          <img src="assets/papers/25_iros/image/抓取照片-card.webp" loading="lazy" decoding="async" alt="Hoeckens linkage hand grasping">
+          <a class="media-zoom" href="assets/papers/25_iros/image/抓取照片-full.webp"><img src="assets/papers/25_iros/image/抓取照片-card.webp" loading="lazy" decoding="async" alt="Hoeckens linkage hand grasping"></a>
         </div>
         <div>
-          <strong>A Novel Robot Hand with Hoeckens Linkages and Soft Phalanges for Scooping and Self-Adaptive Grasping in Environmental Constraints</strong><br>
+          <strong><a class="pub-title-link" href="https://arxiv.org/abs/2510.13535" target="_blank" rel="noreferrer">A Novel Robot Hand with Hoeckens Linkages and Soft Phalanges for Scooping and Self-Adaptive Grasping in Environmental Constraints</a></strong><br>
           <i><strong>Wentao Guo</strong>, Yizhou Wang, Wenzeng Zhang<sup>†</sup>.</i><br>
           <p>
             A robot hand design for scooping and self-adaptive grasping in environmental constraints, combining Hoeckens linkages with soft phalanges.
@@ -194,38 +194,38 @@ redirect_from:
     <ul class="full-publication-list">
       <li>
         <span class="pub-list-badge">Under Review</span>
-        <span class="pub-list-title">RopeTrack: Hand Pose Estimation with Low-Cost String Sensing and Sparse Visual Updates</span><br>
+        <a class="pub-list-title" href="assets/papers/26_ropetrack/ropetrack_overview.mp4">RopeTrack: Hand Pose Estimation with Low-Cost String Sensing and Sparse Visual Updates</a><br>
         <span class="pub-list-authors"><strong>Wentao Guo</strong>, Qian Luo, Yu Zhang, Yanchao Yang<sup>†</sup>.</span>
         <span class="pub-list-links"><a href="assets/papers/26_ropetrack/ropetrack_overview.mp4">[video]</a></span>
       </li>
       <li>
         <span class="pub-list-badge">CoRL 2026</span>
-        <span class="pub-list-title">RoboLineage: Agent-Native Data Lifecycle Governance Across Robot Policy Iterations</span><br>
+        <a class="pub-list-title" href="https://robolineage.github.io/">RoboLineage: Agent-Native Data Lifecycle Governance Across Robot Policy Iterations</a><br>
         <span class="pub-list-authors">Qian Luo, <strong>Wentao Guo</strong>, Zhennan Qin, Nanchun Guo, Yunhan Zhao, Yi Ma, Yanchao Yang<sup>†</sup>.</span>
         <span class="pub-list-links"><a href="https://arxiv.org/abs/2606.22142">[arXiv]</a><a href="https://robolineage.github.io/">[page]</a><a href="https://github.com/robolineage/robolineage">[code]</a><a href="https://robolineage.github.io/#videos">[video]</a></span>
       </li>
       <li>
         <span class="pub-list-badge">NeurIPS 2026 D&amp;B Track</span>
-        <span class="pub-list-title">TwinRouterBench: Fast Static and Live Dynamic Evaluation for Realistic Agentic LLM Routing</span><br>
+        <a class="pub-list-title" href="https://commonstackai.github.io/TwinRouterBench/">TwinRouterBench: Fast Static and Live Dynamic Evaluation for Realistic Agentic LLM Routing</a><br>
         <span class="pub-list-authors">Pei Yang*, Wanyi Chen*, Tongyun Yang, Pengbin Feng, Jiarong Xing, <strong>Wentao Guo</strong>, Yuhang Yao, Yuhang Han, Hanchen Li, Xu Wang, Zeyu Wang, Jie Xiao, Anjie Yang, Liang Tian, Lynn Ai, Eric Yang, Tianyu Shi<sup>†</sup>.</span>
         <span class="pub-list-links"><a href="https://arxiv.org/abs/2605.18859">[arXiv]</a><a href="https://commonstackai.github.io/TwinRouterBench/">[page]</a><a href="https://github.com/CommonstackAI/TwinRouterBench">[code]</a></span>
       </li>
       <li>
         <span class="pub-list-badge">Preprint</span>
         <span class="pub-list-badge">IROS Workshop CIM Best Demo Award</span>
-        <span class="pub-list-title">SCAL for Pinch-Lifting: Complementary Rotational and Linear Prototypes for Environment-Adaptive Grasping</span><br>
+        <a class="pub-list-title" href="https://arxiv.org/abs/2510.22738">SCAL for Pinch-Lifting: Complementary Rotational and Linear Prototypes for Environment-Adaptive Grasping</a><br>
         <span class="pub-list-authors"><strong>Wentao Guo</strong>, Wenzeng Zhang<sup>†</sup>.</span>
         <span class="pub-list-links"><a href="assets/papers/26_icra/icra2026.pdf">[PDF]</a><a href="https://arxiv.org/abs/2510.22738">[arXiv]</a><a href="assets/papers/26_icra/tl_hand_final.mp4">[video]</a><a href="assets/papers/26_icra/poster.jpg?view=poster">[poster]</a></span>
       </li>
       <li>
         <span class="pub-list-badge">ROBIO 2025 Oral</span>
-        <span class="pub-list-title">Hoecken-D Hand: A Novel Robotic Hand for Linear Parallel Pinching and Self-Adaptive Grasping</span><br>
+        <a class="pub-list-title" href="https://arxiv.org/abs/2510.13553">Hoecken-D Hand: A Novel Robotic Hand for Linear Parallel Pinching and Self-Adaptive Grasping</a><br>
         <span class="pub-list-authors"><strong>Wentao Guo</strong>, Wenzeng Zhang<sup>†</sup>.</span>
         <span class="pub-list-links"><a href="assets/papers/25_robio/25_robio_hoeckend.pdf">[PDF]</a><a href="https://arxiv.org/abs/2510.13553">[arXiv]</a><a href="assets/papers/25_robio/poster.jpg?view=poster">[poster]</a></span>
       </li>
       <li>
         <span class="pub-list-badge">IROS 2025 Oral</span>
-        <span class="pub-list-title">A Novel Robot Hand with Hoeckens Linkages and Soft Phalanges for Scooping and Self-Adaptive Grasping in Environmental Constraints</span><br>
+        <a class="pub-list-title" href="https://arxiv.org/abs/2510.13535">A Novel Robot Hand with Hoeckens Linkages and Soft Phalanges for Scooping and Self-Adaptive Grasping in Environmental Constraints</a><br>
         <span class="pub-list-authors"><strong>Wentao Guo</strong>, Yizhou Wang, Wenzeng Zhang<sup>†</sup>.</span>
         <span class="pub-list-links"><a href="assets/papers/25_iros/201866-3909.pdf">[PDF]</a><a href="https://arxiv.org/abs/2510.13535">[arXiv]</a><a href="https://www.youtube.com/watch?v=eQuu3pJjB0U">[video]</a><a href="assets/papers/25_iros/poster.jpg?view=poster">[poster]</a></span>
       </li>
@@ -241,8 +241,7 @@ redirect_from:
         <img class="education-logo-wide" src="images/school_logo/hku_logo-card.webp" loading="lazy" decoding="async" alt="The University of Hong Kong logo">
       </div>
       <div class="education-info">
-        <strong>The University of Hong Kong</strong><br>
-        <em>2026.09 - Present</em><br>
+        <div class="education-head"><strong>The University of Hong Kong</strong><em>2026.09 - Present</em></div>
         Ph.D. student in Embodied AI, <a href="https://www.cds.hku.hk/" target="_blank" rel="noreferrer">School of Computing and Data Science (CDS)</a>, advised by <a href="https://yanchaoyang.github.io/" target="_blank" rel="noreferrer">Yanchao Yang</a>.
       </div>
     </div>
@@ -252,8 +251,7 @@ redirect_from:
         <img class="education-logo-wide" src="images/school_logo/transcengram_logo-card.webp" loading="lazy" decoding="async" alt="Transcengram logo">
       </div>
       <div class="education-info">
-        <strong>Transcengram</strong><br>
-        <em>2025.10 - 2026.09</em><br>
+        <div class="education-head"><strong>Transcengram</strong><em>2025.10 - 2026.09</em></div>
         Algorithm Intern in <a href="https://transcengram.com/" target="_blank" rel="noreferrer">Transcengram</a>, Shenzhen Algorithm Department. Research on teleoperation and data collection, which led to <a href="https://robolineage.github.io/" target="_blank" rel="noreferrer">RoboLineage</a> (CoRL 2026) and RopeTrack (under review).
       </div>
     </div>
@@ -264,8 +262,7 @@ redirect_from:
         <img src="images/school_logo/Tsinghua_University_Logo.svg" alt="Tsinghua University logo">
       </div>
       <div class="education-info">
-        <strong>X-Institute (X-Scholar)</strong><br>
-        <em>2024.10 - 2026.08</em><br>
+        <div class="education-head"><strong>X-Institute (X-Scholar)</strong><em>2024.10 - 2026.08</em></div>
         Tsinghua University Tsien Excellence in Engineering Program (Joint Training), advised by <a href="https://scholar.google.com/citations?hl=zh-CN&amp;user=n-3doEMAAAAJ" target="_blank" rel="noreferrer">Wenzeng Zhang</a>. Research on underactuated hands and embodied AI policies.
       </div>
     </div>
@@ -275,8 +272,7 @@ redirect_from:
         <img src="images/school_logo/bit_logo.svg" alt="Beijing Institute of Technology logo">
       </div>
       <div class="education-info">
-        <strong>Beijing Institute of Technology</strong><br>
-        <em>2022.08 - 2026.06</em><br>
+        <div class="education-head"><strong>Beijing Institute of Technology</strong><em>2022.08 - 2026.06</em></div>
         School of Computer Science · Xu Teli Honors Program (B.Eng.). Dewin Scholarship.
       </div>
     </div>
@@ -289,13 +285,13 @@ redirect_from:
   <div class="project-card">
     <div class="homepage-card-body">
       <div class="pub-media-rotator homepage-media" data-interval="4000">
-        <img src="images/projects/26WBCD_mu0-card.webp" loading="lazy" decoding="async" alt="mu0 deformable object manipulation project">
+        <a class="media-zoom" href="images/projects/26WBCD_mu0-full.webp"><img src="images/projects/26WBCD_mu0-card.webp" loading="lazy" decoding="async" alt="mu0 deformable object manipulation project"></a>
       </div>
       <div>
         <strong>mu0 · Deformable Object Manipulation</strong>
         <span class="status-pill">2026</span><br>
         <div class="project-badges">
-          <a href="https://wbcdcompetition.github.io/#Winners" target="_blank" rel="noreferrer">Best Innovation Solution · 2nd WBCD Competition @ ICRA 2026</a>
+          <a href="https://wbcdcompetition.github.io/#Winners" target="_blank" rel="noreferrer" class="project-award">Best Innovation Solution · 2nd WBCD Competition @ ICRA 2026</a>
         </div>
         <p>
           Designed and standardized a task-specific action workflow, collected UMI data, supplemented targeted data with DAgger, and fine-tuned the model for robust deformable-object manipulation.
@@ -307,13 +303,13 @@ redirect_from:
   <div class="project-card">
     <div class="homepage-card-body">
       <div class="pub-media-rotator homepage-media" data-interval="4000">
-        <img src="images/projects/25AMSE-card.webp" loading="lazy" decoding="async" alt="Adaptive robotic grippers project">
+        <a class="media-zoom" href="images/projects/25AMSE-full.webp"><img src="images/projects/25AMSE-card.webp" loading="lazy" decoding="async" alt="Adaptive robotic grippers project"></a>
       </div>
       <div>
         <strong>Adaptive Robotic Grippers for Multi-Mode Grasping with Pinching and Scooping under Environmental Constraints</strong>
         <span class="status-pill">2025</span><br>
         <div class="project-badges">
-          <a href="https://sites.google.com/site/asmemrc/design-competition-showcase/2025-finalists#h.2oibi1g704mf" target="_blank" rel="noreferrer">ASME SMRDC 2025 1st Place</a>
+          <a href="https://sites.google.com/site/asmemrc/design-competition-showcase/2025-finalists#h.2oibi1g704mf" target="_blank" rel="noreferrer" class="project-award">ASME SMRDC 2025 1st Place</a>
           <a href="https://youtu.be/kNnKri4CBBw" target="_blank" rel="noreferrer">Video</a>
           <a href="assets/papers/25_iros/201866-3909.pdf" target="_blank" rel="noreferrer">Paper</a>
         </div>
@@ -327,17 +323,17 @@ redirect_from:
   <div class="project-card">
     <div class="homepage-card-body">
       <div class="pub-media-rotator homepage-media" data-interval="4000">
-        <img src="images/projects/MoYiXing-card.webp" loading="lazy" decoding="async" alt="MoYiXing modular robot car">
+        <a class="media-zoom" href="images/projects/MoYiXing-full.webp"><img src="images/projects/MoYiXing-card.webp" loading="lazy" decoding="async" alt="MoYiXing modular robot car"></a>
       </div>
       <div>
         <strong>MoYiXing Modular Robot Car (Lidar + 6-DOF Arm)</strong>
         <span class="status-pill">2024</span><br>
         <div class="project-badges">
-          <span>National 1st Prize · RoboCup Innovation</span>
-          <span>National 1st Prize · University Robot Creative Competition</span>
+          <span class="project-award">National 1st Prize · RoboCup Innovation</span>
+          <span class="project-award">National 1st Prize · University Robot Creative Competition</span>
           <!-- Hidden to keep the card to the two 1st prizes; both are still listed under Awards (2024).
-          <span>National 2nd Prize · Robot Combat</span>
-          <span>National 2nd Prize · International Youth AI Competition</span>
+          <span class="project-award">National 2nd Prize · Robot Combat</span>
+          <span class="project-award">National 2nd Prize · International Youth AI Competition</span>
           -->
         </div>
         <p>
@@ -350,13 +346,13 @@ redirect_from:
   <div class="project-card">
     <div class="homepage-card-body">
       <div class="pub-media-rotator homepage-media" data-interval="4000">
-        <img src="images/projects/YiBao-card.webp" loading="lazy" decoding="async" alt="YiBao meeting agent">
+        <a class="media-zoom" href="images/projects/YiBao-full.webp"><img src="images/projects/YiBao-card.webp" loading="lazy" decoding="async" alt="YiBao meeting agent"></a>
       </div>
       <div>
         <strong>YiBao · Meeting Agent (On-device LLM + Local DB + RAG)</strong>
         <span class="status-pill">2024</span><br>
         <div class="project-badges">
-          <a href="https://www.osredm.com/competition/cyyy/notice" target="_blank" rel="noreferrer">National 3rd Prize · Open-Source Innovation</a>
+          <a href="https://www.osredm.com/competition/cyyy/notice" target="_blank" rel="noreferrer" class="project-award">National 3rd Prize · Open-Source Innovation</a>
           <a href="https://www.osredm.com/p69087132/yibao" target="_blank" rel="noreferrer">OSRedM Repo</a>
           <a href="https://www.osredm.com/p69087132/yibao/tree/master/%E5%B1%95%E7%A4%BA%E8%A7%86%E9%A2%91.mp4" target="_blank" rel="noreferrer">Video</a>
         </div>
@@ -372,13 +368,13 @@ redirect_from:
   <div class="project-card">
     <div class="homepage-card-body">
       <div class="pub-media-rotator homepage-media" data-interval="4000">
-        <img src="images/projects/weather-card.webp" loading="lazy" decoding="async" alt="Digital twin and AI for grid resilience">
+        <a class="media-zoom" href="images/projects/weather-full.webp"><img src="images/projects/weather-card.webp" loading="lazy" decoding="async" alt="Digital twin and AI for grid resilience"></a>
       </div>
       <div>
         <strong>Yi-Dian-Yi-Di: Problem-Driven Digital Twin + Strong AI for Grid Resilience</strong>
         <span class="status-pill">2024</span><br>
         <div class="project-badges">
-          <span>Special Prize · Challenge Cup Problem-Driven Special Track</span>
+          <span class="project-award">Special Prize · Challenge Cup Problem-Driven Special Track</span>
           <a href="https://mp.weixin.qq.com/s/7oM3LOVDVTd2uuUYfdLXgg" target="_blank" rel="noreferrer">BIT Official WeChat Report</a>
         </div>
         <p>
@@ -391,13 +387,13 @@ redirect_from:
   <div class="project-card">
     <div class="homepage-card-body">
       <div class="pub-media-rotator homepage-media" data-interval="4000">
-        <img src="images/projects/sleep-card.webp" loading="lazy" decoding="async" alt="Sleep bias mitigation pipeline">
+        <a class="media-zoom" href="images/projects/sleep-full.webp"><img src="images/projects/sleep-card.webp" loading="lazy" decoding="async" alt="Sleep bias mitigation pipeline"></a>
       </div>
       <div>
         <strong>Bias Mitigation Pipeline for Sleep-Focused LLM Tasks</strong>
         <span class="status-pill">2024</span><br>
         <div class="project-badges">
-          <span>Disruptive Innovation Award</span>
+          <span class="project-award">Disruptive Innovation Award</span>
           <a href="https://mp.weixin.qq.com/s/fILJC71T2K0f8nhAyzxn6A" target="_blank" rel="noreferrer">X-Challenge Track 7</a>
         </div>
         <p>
@@ -514,10 +510,23 @@ function initProjectsToggle() {
   });
 }
 
+/* Card figures open their -full.webp in the theme's Magnific Popup lightbox;
+   without it the link still opens the image itself. */
+function initMediaZoom() {
+  if (!window.jQuery || !jQuery.fn.magnificPopup) return;
+  jQuery('.media-zoom').magnificPopup({
+    type: 'image',
+    closeOnContentClick: true,
+    mainClass: 'mfp-media-zoom',
+    removalDelay: 160
+  });
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   filterPublications(null, 'core');
   filterAwards(null, 'full');
   initProjectsToggle();
+  initMediaZoom();
 });
 </script>
 <script src="assets/js/pub_media_rotator.js"></script>

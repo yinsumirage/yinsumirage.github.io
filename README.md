@@ -33,6 +33,13 @@ or replacing a card image, regenerate its card copy and point `_pages/about.md` 
 ffmpeg -i images/projects/foo.png -vf "scale='min(720,iw)':'min(405,ih)':force_original_aspect_ratio=decrease" -pix_fmt yuva420p -c:v libwebp -quality 82 images/projects/foo-card.webp
 ```
 
+Clicking a card image opens a larger `<name>-full.webp` in a lightbox, so make that
+copy too and link it from the `<a class="media-zoom">` around the card image:
+
+```bash
+ffmpeg -i images/projects/foo.png -vf "scale='min(2000,iw)':'min(1400,ih)':force_original_aspect_ratio=decrease" -pix_fmt yuva420p -c:v libwebp -quality 82 images/projects/foo-full.webp
+```
+
 ## Writing a Blog Post
 
 Create `_posts/YYYY-MM-DD-slug.md`; it is published at `/blog/YYYY/slug/`.
