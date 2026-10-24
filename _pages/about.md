@@ -1,4 +1,4 @@
-﻿---
+---
 permalink: /
 author_profile: true
 stylesheets:
