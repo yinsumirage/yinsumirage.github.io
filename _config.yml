@@ -113,6 +113,9 @@ include:
 exclude:
   - "*.sublime-project"
   - "*.sublime-workspace"
+  - AGENTS.md
+  - CLAUDE.md
+  - README.md
   - .asset-cache
   - .bundle
   - .jekyll-assets-cache
